@@ -1,0 +1,29 @@
+.main-text{
+	margin: 4%;
+	text-align: justify;
+	background-color: rgba(250, 235, 215, 0.185);
+}
+h2{
+	/* font-size: 25px; */
+	text-align: left;
+	padding:15px;
+	color: #eb2f06;
+	margin: 0 auto;
+}
+.jumbotron{
+	color: beige;
+}
+.text{
+	background-color: rgba(250, 235, 215, 0.185);
+}
+.center{
+	text-align: center;
+}
+body{
+    /*background-image: url(../res/SpottedDeer.jpg) top no-repeat,url(https://2.bp.blogspot.com/-GhzWcwIlOpQ/WND5vzXyXSI/AAAAAAAAABQ/J03zzN7DOYUXp_P0sbcUupup5dR4qM2VgCLcB/s1600/unnamed.jpg) bottom no-repeat;  */  
+    background: url(../res/SpottedDeer.jpg) top no-repeat, url(https://prashantghotikar.files.wordpress.com/2010/10/dsc00998.jpg)bottom no-repeat;
+}
+p{
+	font-size: 20px;
+	font-family: serif
+}

@@ -1,0 +1,43 @@
+html{
+    scroll-behavior: smooth;
+}
+
+.socialmedia{
+    color: grey;
+    font-size: 1.5rem;
+}
+.fa-facebook:hover{
+    color:#3b5998 !important;
+}
+.fa-instagram:hover{
+    color:rgb(255, 0, 128);
+}
+.fa-twitter:hover{
+    color:#38A1F3;
+}
+.fa-google-plus:hover{
+    color:#CC3333;
+}
+.last{
+    padding-right: 1rem;
+}
+.top-header-date{
+    display: inline-block;
+    padding: 1.4rem;
+    color: grey;
+}
+nav a:hover{
+    color:hotpink !important;
+    background-color: black !important;   
+}
+.navbar{
+    border-radius: 0 !important;
+    padding-bottom: 0 !important;
+    clear: none !important;
+    border: none !important;
+    margin-bottom: 0;
+    overflow: hidden !important;
+}
+.active{
+    color: hotpink !important;
+}

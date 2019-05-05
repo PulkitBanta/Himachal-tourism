@@ -1,0 +1,202 @@
+html,body {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+#content {
+	padding-bottom: 100px;
+}
+.main {
+	height: 1000px;
+	margin : 0 auto;
+}
+.header {
+	height: 100px;
+	border-bottom: 1px solid blue;
+	position: relative;
+	background-color: white;
+}
+.header-logo {
+	position: relative;
+	padding: 0px 10px;
+	float: left;
+}
+.header-list a {
+	position: relative;
+	color:blue;
+	font-size:20px; 
+	padding:35px 25px; 
+	float: right; 
+	list-style: none;
+}
+#align{
+	position: relative;
+}
+.top li{
+	list-style-type: none;
+}
+.footer {
+	position: absolute;
+	border-top: 2px solid #6ad8d8;
+	border-bottom: 1px solid #7f8fa6;
+	background-color: white;
+	width: 100%;
+	height: 100px;
+	overflow: hidden;
+}
+.footer-logo {
+	padding: 10px 10px;
+	position: relative;
+	float: left;
+}
+.footer-list a{
+	float: right;
+	position: relative;
+	padding: 35px 20px;
+	color: #ff4d4d;
+	font-size: 20px;
+	list-style: none;
+}
+.footer-list a:hover{
+	background-color:lightgoldenrodyellow;
+}
+.main-left-contents ol{
+	float: left;
+	list-style-type: none;
+}
+.main-left-contents li{
+	margin: 10px 50px 10px -25px;
+	background: #C4E538;
+	padding: 5px;
+	font-size: 10px;
+}
+.main-left-contents li:hover{
+	background-color:#00FFFF;
+	color: white;
+}	
+.main-left-contents li:hover a{
+	
+	color: white;
+}
+.top{
+	height: 30px;
+	position: relative;
+	background-color: grey;
+}
+.section-contents{
+	position: relative;
+	padding:0 15px 0 15px;
+	font-size: 20px;
+	float: left;
+	text-align: center;
+}
+.section-contents-n{
+	margin-left: 17%;
+}
+.al{
+	text-decoration: none;
+	color: green;
+}
+.cm{
+	float: left;
+	margin: 10px 0;
+	padding: 10px;
+	image-rendering: auto;
+	font-size: 20px;
+	position: relative;
+}
+.governer{
+	padding: 10px;
+	margin: 10px 0px;
+	image-rendering: auto;
+	font-size: 20px;
+	float:right;
+	position: relative;
+
+}
+.about{
+	font-size: 35px;
+	padding-top: 15px;
+	color: #c0392b;
+	position: relative;
+}
+a{
+	text-decoration: none;
+	font-size:20px;
+}
+#abouthimachal{
+	font-size: 20px;
+	text-align: justify;
+	padding: 0 10px 10px 10px;
+	font-family: serif;
+	margin: auto;
+	color: black;
+	position: relative;
+	width: 60%;
+	border-bottom: 2px solid #FDA7DF;
+}
+#copyright{
+	position: relative;
+	font-family: monospace;
+	font-size: 15px;
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+}
+#copy{
+	text-decoration: none;
+	color: blue;
+}
+#mainwebsite{
+	text-decoration: none;
+	color: #871614;
+}
+.district{
+	text-decoration: none;
+	color: black;
+}
+.b{
+	display: none;
+}
+.header-list ul li ol:hover{
+	opacity: 1;
+	display: block;
+}
+.bottom{
+	background-color: #dcdde1;
+}
+body{
+	margin: 0px;
+}
+.dropdown{
+	position:relative;
+	float:right;
+}
+.dropbtn{
+	font-size:20px;
+	padding:35px 25px;
+	border:none;
+	color:blue;
+	background-color:white;
+}
+.dropdown-content{
+	display:none;
+	z-index:1;
+	background-color:rgba(241, 231, 172, 0.205);
+	position:absolute;
+	overflow:hidden;
+}
+.dropdown-content a{
+	font-size:20px;
+	width:70%;
+	margin:0;
+	display: block;
+	text-decoration :none;
+	padding:15px;
+}
+.header-list a:hover,.dropbtn:hover{
+	background-color:rgb(127, 208, 235);
+}
+.dropdown:hover .dropdown-content{
+	display:block;
+}

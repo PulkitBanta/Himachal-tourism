@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../../bootstrap/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+  <script src="../../jquery/jquery-3.3.1.js"></script>
+  <script src="../../bootstrap/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Tourism: travelling the world</title>
+
+  <script>
+    // $(window).on('load',function(){
+    //           setTimeout(function() {         // USED TO SET DELAY TIME FOR THE FUNCTION
+    //             $('#myModal').modal('show');
+    //           }, 120000)                      // THE TIME IS USED IN ms
+    //       });
+    // $(document).ready(function(){
+    //   $('log-in').click(function(){
+        
+    //   })
+    // })
+    
+
+
+    //  This is the background-corousel
+    var bgArr = ["../res/slide1.jpg", "../res/slide2.jpg","../res/slide3.jpg","../res/prasharLake.jpg","../res/kangraValley.jpg"]; //and so on...
+    
+    var i=0;
+      
+    // Start the slide show
+    var interval = self.setInterval("swapBkgnd()", 5000)  
+      
+    function swapBkgnd() {
+    if (i>(bgArr.length-1) ) {
+    i=0
+    $(".background-img").css("background-image", "url("+bgArr[i]+")");
+    // console.log("inside loop");
+    }
+    else {
+    $(".background-img").css("background-image", "url("+bgArr[i]+")"); 
+    } 
+    i++;
+    };
+
+  </script>
+
+  <style>
+
+    /* hiding scrollbar */
+
+    html::-webkit-scrollbar{
+    display: none; 
+    }
+    html{
+      scrollbar-width:none;
+      -ms-overflow-style: none;
+    }
+    /* scrollbar hidden */
+    .center-fit{
+      width: 100%;
+      height: 100vh;
+      display: block;   }
+    .background-img{
+      background-image: url(../res/slide1.jpg);
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;
+      position: relative;
+      overflow: hidden;
+      /* we set transition to 'all' properies - but you can use it just for background image either -
+       by default the time is set to 1 second, you can change it yourself*/
+      -moz-transition: linear all 2s;
+      transition: linear all 2s;
+      /* if you don't use delay , background will disapear and transition will start from a white background - 
+      you have to set the transition-delay the same as transition time OR more , so there won't be any problems */
+      -moz-transition-delay: 2s;/* Safari */
+      transition-delay: 2s;
+    }
+    .navbar{
+      margin-bottom: 0;
+      overflow: hidden;
+      padding: 0;
+      margin-top:-3rem;
+    }
+    body,html{
+      margin: 0;
+    }
+    .container{
+      margin-top:5rem;
+      text-align: center;;
+    }
+    .top-img{
+      width: 50%;
+    }
+    .navbar-nav{
+      padding-top: 2rem;
+
+    }
+    .active{
+      color:rgba(235, 25, 77, 0.877) !important;
+    }
+    .navs{
+      font-size: 3rem;
+      color: rgb(255, 255, 255);
+    }
+    .navs:hover{
+      text-decoration: none !important;
+      color: white;
+      background-color: transparent !important;
+    }
+    .description{
+      background-color: rgba(165, 42, 42, 0.589);
+      color:white;
+      margin-top:-35%;
+      margin-left: 45%;
+      padding: 5rem;
+      position: absolute;
+    }
+    .link{
+      background-image: url("../res/chambamain.jpg");
+      width: 100%;
+      height: 80vh;
+      /* text-align: center; */
+      background-repeat: no-repeat;;
+    }
+    .content{
+      background-color: rgba(47, 235, 235, 0.582);
+      margin : auto 1%;
+      padding: 2rem;
+    }
+    .back{
+      position: relative;
+    }
+    .block{
+      padding: 5rem 30rem;
+    }
+    .col-lg-3{
+      width:20%;
+      margin-right: 3rem;
+    }
+    @media only screen and (max-width:736px)
+    {
+
+  
+
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- Slide Show at background -->
+  <div class="background-img center-fit">
+
+    <!--Navbar at the top-->
+    <div class="navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <img class="top-img" src="../res/himachal-logo.png">
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a class="active navs" href="#">Home</a></li>
+          <li><a class="navs" href="#">Tracks</a></li>
+          <li><a class="navs" href="#">Religious</a></li>
+          <li><a class="navs" href="#">Sights</a></li>
+          <li><a class="navs" href="#">About Us</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="block">
+    <img src="../res/kangramain.jpg">
+    <div class="description col-lg-2">
+      <h1>About Tourism in Himachal</h1>
+      <p>Himachal Pradesh is a northern Indian state in the Himalayas. It's home to scenic mountain towns and resorts
+        such as Dalhousie. Host to the Dalai Lama, Himachal Pradesh has a strong Tibetan presence. This is reflected in
+        its Buddhist temples and monasteries, as well as its vibrant Tibetan New Year celebrations. The region is also
+        well known for its trekking, climbing and skiing areas.<br><button class="btn btn-default more">See More</button>
+      </p>
+    </div>
+  </div>
+
+  <div class="link container-fluid">
+    <div class="row" style="margin-top:10%; margin-left: 10%">
+      <div class="col-lg-offset-1 col-lg-3">
+        <div class="content">
+          <h3 style="text-align:center">Tracks or Camping</h3>
+          <p style="padding:2rem;">
+            Adipisicing dolore aliqua officia elit. Cillum commodo sunt non mollit. Esse sit in aute velit ea do sit
+            dolore incididunt incididunt. Voluptate cupidatat commodo officia amet. Proident dolor consequat et dolor
+            labore aliquip tempor aute nostrud. Mollit Lorem anim nisi ea nulla eu anim amet dolore aute officia
+            reprehenderit. Officia ipsum laboris aliqua commodo proident non elit enim.
+            <br><br><button class="btn btn-default more">See More</button>
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="content">
+          <h3 style="text-align:center">Sight Seeing</h3>
+          <p style="padding:2rem;">
+            Adipisicing dolore aliqua officia elit. Cillum commodo sunt non mollit. Esse sit in aute velit ea do sit
+            dolore incididunt incididunt. Voluptate cupidatat commodo officia amet. Proident dolor consequat et dolor
+            labore aliquip tempor aute nostrud. Mollit Lorem anim nisi ea nulla eu anim amet dolore aute officia
+            repehenderit. Officia ipsum laboris aliqua commodo proident non elit enim.
+            <br><br><button class="btn btn-default more">See More</button>
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="content">
+          <h3 style="text-align:center">Holy Places</h3>
+          <p style="padding:2rem;">
+            Adipisicing dolore aliqua officia elit. Cillum commodo sunt non mollit. Esse sit in aute velit ea do sit
+            dolore incididunt incididunt. Voluptate cupidatat commodo officia amet. Proident dolor consequat et dolor
+            labore aliquip tempor aute nostrud. Mollit Lorem anim nisi ea nulla eu anim amet dolore aute officia
+            reprehenderit. Officia ipsum laboris aliqua commodo proident non elit enim.
+            <br><br><button class="btn btn-default more">See More</button>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- Modal to be displayed -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!--Header of Modal-->
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title text-success">Log In for New Updates</h4>
+        </div>
+        <!--Modal Body-->
+        <div class="modal-body">
+          <div class="row">
+            <!--Modal Image-->
+            <div class="col-sm-4">
+              <img src="../res/namaste.jpg">
+            </div>
+            <!--Modal Form-->
+            <div class="col-sm-8">
+              <form class="form-horizontal">
+                <div class="form-group">
+                  <label class="control-label col-sm-3">Email </label>
+                  <div class="col-sm-9">
+                    <input id="email" class="form-control" type="email" placeholder="Enter Your Email">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-3">Password </label>
+                  <div class="col-sm-9">
+                    <input id="password" class="form-control" type="password" placeholder="Enter your Passwword">
+                  </div>
+                </div>
+              </form>
+              <div style="text-align:center;padding:3rem">
+                <button class="btn btn-success log-in">Log In</button>
+                <button class="btn btn-danger sign-up">Sign Up</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Modal Footer-->
+        <div class="modal-footer">
+          <button class="close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
