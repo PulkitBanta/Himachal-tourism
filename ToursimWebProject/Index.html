@@ -65,11 +65,29 @@
       overflow-y: scroll;
     }
 
+    @font-face {
+      font-family: heading;
+        src: url(../BeyondWonderland/BeyondWonderland.ttf);
+    }
+    @font-face {
+        font-family: para;
+        src: url(../BeyondWonderland/arapey.italic.ttf);
+    }
+    @font-face {
+        font-family: nav;
+        src: url(../BeyondWonderland/requiem.regular.ttf);
+    }
+    .texth{
+      font-family: heading;
+    }
+    .textp{
+        font-family: para;
+    }
     /* Navbar Styling */
     .navlinks {
       text-decoration: none;
       color: white;
-      font-family: mistral;
+      font-family: nav;
     }
 
     .icon-bar {
@@ -139,7 +157,7 @@
     }
 
     .Description {
-      position: absolute;
+      position: relative;
       padding: 2rem;
       background-image : linear-gradient(#ff9933 , green);
       left: 65vw;
@@ -197,7 +215,7 @@
       color: rgb(0, 238, 255) !important;
     }
 
-    .col-lg-3 .btn-link a {
+    .col-xs-3 .btn-link a {
       color :rgb(255, 81, 0) !important;
     }
 
@@ -225,8 +243,13 @@
     .justify{
       text-align: justify;
     }
-  </style>
 
+    @media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+  </style>
 
   <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||__STYLING ENDS HERE__||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
 
@@ -248,14 +271,14 @@
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav" style="padding: 3vh 0 2vh 2vw; font-size:2rem;">
-          <li><a class="navlinks" href="../Project/HTML/fair and festivals.html">Fairs and Festivals</a></li>
+          <li><a class="navlinks" href="../Project/HTML/fair and festivals.html">Festivals</a></li>
           <li><a class="navlinks" href="../Project/HTML/eco tourism.html">EcoTourism</a></li>
-          <li><a class="navlinks" href="../Project/HTML/fortsandmemorials.html">Forts And Memorials</a></li>
+          <li><a class="navlinks" href="../Project/HTML/fortsandmemorials.html">Forts</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right" style="padding: 3vh 0 3vh 6vw; font-size:2rem;">
-          <li><a class="navlinks fb" href="facebook.com"><i class="fa fa-facebook"></i></a></li>
-          <li><a class="navlinks insta" href="instragram.com"><i class="fa fa-instagram"></i></a></li>
-          <li><a class="navlinks gplus" href="google.com"><i class="fa fa-google-plus social"></i></a></li>
+          <li><a class="navlinks fb" href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+          <li><a class="navlinks insta" href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+          <li><a class="navlinks gplus" href="https://www.google.com/" target="_blank"><i class="fa fa-google-plus social"></i></a></li>
           <li><a data-target="#myModal" data-toggle="modal" class="navlinks signup" href="#"><i class="fa fa-user"></i> Sign Up</a></li>
           <li><a data-target="#myModal" data-toggle="modal" class="navlinks login" href="#"><i class="fa fa-lock"></i> Login</a></li>
         </ul>
@@ -273,8 +296,8 @@
 
     </div>
     <div data-aos="fade-up-left" data-aos-duration="2500" class="Description">
-      <h2>About Tourism in Himachal Pradesh</h2>
-      <p class="justify">
+      <h2 class="texth">About Tourism in Himachal Pradesh</h2>
+      <p class="justify textp">
         Himachal Pradesh is a northern Indian state in the Himalayas. It's home to scenic mountain towns and resorts
         such as Dalhousie. Host to the Dalai Lama, Himachal Pradesh has a strong Tibetan presence. This is reflected
         in its Buddhist temples and monasteries, as well as its vibrant Tibetan New Year celebrations. The region is
@@ -288,11 +311,11 @@
   <div class="slide3">
 
     <div class="row" id="content">
-      <div class="col-lg-1"></div>
+      <div class="col-xs-1"></div>
 
-      <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2500" class="col-lg-3 listcontent">
-        <h2 style="text-align:center">Treks or Camping</h2>
-        <p class="listbody justify">Camping is an outdoor activity involving overnight stays away from home in a shelter, such
+      <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2500" class="col-xs-3 listcontent">
+        <h2 class="texth" style="text-align:center">Treks or Camping</h2>
+        <p class="listbody justify textp">Camping is an outdoor activity involving overnight stays away from home in a shelter, such
           as a tent. Typically participants leave developed areas to spend time outdoors in more natural ones in pursuit
           of activities providing them enjoyment. To be regarded as "camping" a minimum of one night is spent outdoors,
           distinguishing it from day-tripping, picnicking, and other similarly short-term recreational activities.
@@ -301,21 +324,21 @@
         <!-- <button class="btn btn-link"><a href="About.html">See more</a></button> -->
       </div>
 
-      <div data-aos="flip-down" data-aos-easing="ease-out-cubic" data-aos-duration="2500" class="col-lg-3 listcontent">
-        <h2 style="text-align:center">Sight Seeing</h2>
-        <p class="listbody justify">Tourism is travel for pleasure or business; Tourism is cool also the theory and practice of
+      <div data-aos="flip-down" data-aos-easing="ease-out-cubic" data-aos-duration="2500" class="col-xs-3 listcontent">
+        <h2 class="texth" style="text-align:center">Sight Seeing</h2>
+        <p class="listbody textp justify">Tourism is travel for pleasure or business; Tourism is cool also the theory and practice of
           touring, the business of attracting, accommodating, and entertaining tourists, and the business of operating
           tours. Tourism may be international, or within the traveller's country. The World Tourism Organization
           defines tourism more generally, in terms which go "beyond the common perception of tourism as being limited  to
           holiday  activity  only".
         </p>
-        <br>
+        
         <!-- <button class="btn btn-link"><a href="About.html">See more</a></button> -->
       </div>
 
-      <div data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="2500" class="col-lg-3 listcontent">
-        <h2 style="text-align:center">Holy Places</h2>
-        <p class="listbody">Many shrines are located within buildings and in the temples designed specifically for
+      <div data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="2500" class="col-xs-3 listcontent">
+        <h2 class="texth" style="text-align:center">Holy Places</h2>
+        <p class="listbody textp">Many shrines are located within buildings and in the temples designed specifically for
           worship, such as a church in Christianity, or a mandir in Hinduism. A shrine here is usually the centre of
           attention in the building, and is given a place of prominence. In such cases, adherents of the faith assemble
           within the building in order to venerate the deity at the shrine. In classical temple architecture, the shrine

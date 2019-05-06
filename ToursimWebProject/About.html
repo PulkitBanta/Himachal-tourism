@@ -14,6 +14,24 @@
   <title>About Himachal</title>
 
   <style>
+    @font-face {
+      font-family: heading;
+        src: url(../BeyondWonderland/BeyondWonderland.ttf);
+    }
+    @font-face {
+        font-family: para;
+        src: url(../BeyondWonderland/arapey.italic.ttf);
+    }
+    @font-face {
+        font-family: nav;
+        src: url(../BeyondWonderland/requiem.regular.ttf);
+    }
+    .texth{
+      font-family: heading;
+    }
+    .textp{
+        font-family: para;
+    }
     /* Navbar Styling */
     body {
       margin: 0;
@@ -51,7 +69,7 @@
     .navlinks {
       text-decoration: none;
       color: white;
-      font-family: mistral;
+      font-family: nav;
     }
 
     nav {
@@ -199,14 +217,14 @@
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav" style="padding: 3vh 0 2vh 2vw; font-size:2rem;">
-          <li><a class="navlinks" href="../Project/HTML/fair and festivals.html">Fairs and Festivals</a></li>
+          <li><a class="navlinks" href="../Project/HTML/fair and festivals.html">Festivals</a></li>
           <li><a class="navlinks" href="../Project/HTML/eco tourism.html">EcoTourism</a></li>
-          <li><a class="navlinks" href="../Project/HTML/fortsandmemorials.html">Forts And Memorials</a></li>
+          <li><a class="navlinks" href="../Project/HTML/fortsandmemorials.html">Forts</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right" style="padding: 3vh 0 3vh 6vw; font-size:2rem;">
-          <li><a class="navlinks fb" href="facebook.com"><i class="fa fa-facebook"></i></a></li>
-          <li><a class="navlinks insta" href="instragram.com"><i class="fa fa-instagram"></i></a></li>
-          <li><a class="navlinks gplus" href="google.com"><i class="fa fa-google-plus social"></i></a></li>
+            <li><a class="navlinks fb" href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="navlinks insta" href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            <li><a class="navlinks gplus" href="https://www.google.com/" target="_blank"><i class="fa fa-google-plus social"></i></a></li>
           <li><a data-target="#myModal" data-toggle="modal" class="navlinks signup" href="#"><i class="fa fa-user"></i>Sign Up</a></li>
           <li><a data-target="#myModal" data-toggle="modal" class="navlinks login" href="#"><i class="fa fa-lock"></i>Login</a></li>
         </ul>
