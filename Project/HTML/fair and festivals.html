@@ -4,7 +4,7 @@
 <head>
 	<link rel="stylesheet" href="../../bootstrap/bootstrap-3.3.7-dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script src="../../jquery/jquery-3.3.1.js"></script>
+	<script src="../../ToursimWebProject/jquery-3.3.1.min.js"></script>
 	<script src="../../bootstrap/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 	<!-- cdn for aos -->
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -13,59 +13,60 @@
 	<title>Fair and Festivals</title>
 
 	<style>
+		@font-face {
+            font-family: heading;
+            src: url(../../BeyondWonderland/BeyondWonderland.ttf);
+        }
+        @font-face {
+            font-family: para;
+            src: url(../../BeyondWonderland/arapey.italic.ttf);
+        }
+        @font-face {
+            font-family: nav;
+            src: url(../../BeyondWonderland/requiem.regular.ttf);
+        }
+        .texth{
+            font-family: heading;
+        }
+        .textp{
+            font-family: para;
+        }
 		/* Navbar Styling */
-
 		body {
-			font-family: ink free;
+			margin: 0;
 			scroll-snap-type: mandatory;
 			scroll-snap-points-y: repeat(100vh);
 			scroll-snap-type: y mandatory;
 		}
-
 		.navlinks:hover {
 			background-color: transparent !important;
 			text-decoration: none !important;
 			color: rgb(235, 86, 160);
 		}
-
 		.fb:hover {
 			color: #3b5998;
 		}
-
 		.gplus:hover {
 			color: #d34836;
 		}
-
 		.insta:hover {
 			color: #c13584;
 		}
-
 		.login:hover {
 			color: rgb(35, 145, 235);
 		}
-
 		.signup:hover {
 			color: rgb(243, 240, 79);
 		}
-
 		.navlinks {
 			text-decoration: none;
 			color: white;
-			font-family: mistral;
+			font-family: nav;
 		}
-
 		nav {
 			margin-bottom: 0;
 			background-color: rgba(20, 93, 95, 0.486);
 		}
-
-		body {
-			margin: 0;
-			font-family: ink free;
-			scroll-snap-type: y mandatory;
-			overflow-y: scroll;
-		}
-
 		#d1 {
 			top: 20vh;
 			/* margin-left:20vw; */
@@ -73,7 +74,6 @@
 			min-height: 55vh;
 			left: 10vw;
 		}
-
 		#d2 {
 			top: 7vh;
 			/* margin-left:20vw; */
@@ -81,31 +81,27 @@
 			min-height: 75vh;
 			right: 10vw;
 		}
-
 		#d3 {
-			top: 2vh;
+			top: 4vh;
 			/* margin-left:20vw; */
 			width: 45vw;
 			min-height: 60vh;
 			left: 10vw;
 		}
-
 		#d4 {
-			top: 4vh;
+			top: 6vh;
 			/* margin-left:20vw; */
 			width: 45vw;
 			min-height: 75vh;
 			right: 10vw;
 		}
-
 		#d5 {
-			top: 4vh;
+			top: 6vh;
 			/* margin-left:20vw; */
 			width: 45vw;
 			min-height: 60vh;
 			left: 10vw;
 		}
-
 		.Description {
 			z-index: 1;
 			position: absolute;
@@ -115,14 +111,12 @@
 			font-size: 1.5vw;
 			font-family: Mono;
 		}
-
 		#s1 {
 			right: 1vw;
 			top: 20vh;
 			background-image: url("Resources/Images/Picture1.png");
 			left: 50vw;
 		}
-
 		#s2 {
 			left: 1vw;
 			right: 50vw;
@@ -132,7 +126,6 @@
 			height: 80vh;
 			background-image: url("https://i.ytimg.com/vi/8VnRZRWBeto/maxresdefault.jpg");
 		}
-
 		#s3 {
 			right: 1vw;
 			top: 12.5vh;
@@ -141,7 +134,6 @@
 			border: 15px solid white;
 			border-radius: 3px;
 		}
-
 		#s4 {
 			left: 1vw;
 			right: 50vw;
@@ -151,7 +143,6 @@
 			height: 80vh;
 			background-image: url("https://www.makemytrip.com/travel-guide/media/dg_image/jammu/Lohri.jpg");
 		}
-
 		#s5 {
 			right: 1vw;
 			top: 15vh;
@@ -160,37 +151,27 @@
 			border: 15px solid white;
 			border-radius: 3px;
 		}
-
 		.AboutSlider {
 			width: auto;
-
-
 			height: 70vh;
 			padding: 1vw;
 			position: absolute;
-
 			background-size: cover;
 			background-position: center;
 			background-origin: center;
-
 		}
-
 		#slide5 {
 			background-image: url(https://tritontravels.co.in/wp-content/uploads/2017/12/mountains_of_seraj_himachal_pradesh_india-1920x1080.jpg);
 		}
-
 		#slide2 {
 			background-image: url(https://tritontravels.co.in/wp-content/uploads/2017/12/mountains_of_seraj_himachal_pradesh_india-1920x1080.jpg);
 		}
-
 		#slide3 {
 			background-image: url(http://himachal.nic.in/images/photo-of-the-week/2018/mar/kumarsain.jpg);
 		}
-
 		#slide4 {
 			background-image: url(http://www.hotelapplepie.com/blog/wp-content/uploads/2014/07/himalaya5.jpg);
 		}
-
 		.slide {
 			background-attachment: fixed;
 			background-position: center;
@@ -199,9 +180,7 @@
 			overflow: hidden;
 			position: relative;
 		}
-
 		.aboutUs {
-
 			top: 50vh;
 			left: -5vw;
 			transform: rotate(-90deg);
@@ -210,32 +189,25 @@
 			text-shadow: 2px 3px 10px black;
 			/* horizontal position | vertical position | blur radius |color */
 		}
-
 		.aboutUsl {
 			right: 0vw;
-
 			top: 50vh;
-
 			transform: rotate(90deg);
 			position: absolute;
 			color: rgb(255, 255, 255);
 			text-shadow: 2px 3px 10px black;
 			/* horizontal position | vertical position | blur radius |color */
 		}
-
 		.icon-bar {
 			background-color: rgb(204, 48, 48) !important;
 		}
-
 		.form-control {
 			width: 60% !important;
 		}
-
 		.margin {
 			margin: 2vh !important;
 			text-align: center;
 		}
-
 		section {
 			/* border-bottom: 1px solid white; */
 			/* padding: 1rem; */
@@ -261,14 +233,14 @@
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav" style="padding: 3vh 0 2vh 2vw; font-size:2rem;">
-					<li><a class="navlinks" href="fair and festivals.html">Fairs and Festivals</a></li>
+					<li><a class="navlinks" href="fair and festivals.html">Festivals</a></li>
 					<li><a class="navlinks" href="eco tourism.html">EcoTourism</a></li>
-					<li><a class="navlinks" href="fortsandmemorials.html">Forts And Memorials</a></li>
+					<li><a class="navlinks" href="fortsandmemorials.html">Forts</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right" style="padding: 3vh 0 3vh 6vw; font-size:2rem;">
-					<li><a class="navlinks fb" href="facebook.com"><i class="fa fa-facebook"></i></a></li>
-					<li><a class="navlinks insta" href="instragram.com"><i class="fa fa-instagram"></i></a></li>
-					<li><a class="navlinks gplus" href="google.com"><i class="fa fa-google-plus social"></i></a></li>
+						<li><a class="navlinks fb" href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+						<li><a class="navlinks insta" href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+						<li><a class="navlinks gplus" href="https://www.google.com/" target="_blank"><i class="fa fa-google-plus social"></i></a></li>
 					<li><a data-target="#myModal" data-toggle="modal" class="navlinks signup" href="#"><i class="fa fa-user"></i> Sign Up</a></li>
           			<li><a data-target="#myModal" data-toggle="modal" class="navlinks login" href="#"><i class="fa fa-lock"></i> Login</a></li>
 				</ul>
@@ -284,11 +256,11 @@
 
 			<div class="Description container" id="d1">
 
-				<h1 style="font-family: Lumos;">
+				<h1 class="texth">
 					Fair and Festivals of Himachal Pradesh
 				</h1>
 				<hr>
-				<p style="font-family: Mono;">
+				<p class="textp">
 					There are 20 state level fairs or festivals recognised by the the Government at present in Himachal
 					Pradesh. They have an educational, social as well as religious character. These serve the needs of
 					social integration not only for economic sustenance but also for cultural survival. Generally the
@@ -316,11 +288,11 @@
 
 			<div data-aos="fade-left" data-aos-duration="3000" class="Description" id="d2">
 
-				<h1 style="font-family: Lumos;">
+				<h1 class="texth">
 					Halda festival : Welcome the New Year
 				</h1>
 				<hr>
-				<p style="font-family: Mono;">
+				<p class="textp">
 					Dedicated to the goddess of wealth, Shashikar Apa, Halda festival is celebrated with great zeal and
 					enthusiasm in order to celebrate the new year. The actual date of the celebration is decided by the
 					Lamas.
@@ -351,11 +323,11 @@
 
 			<div data-aos="fade-right" data-aos-duration="3000" class="Description" id="d3">
 
-				<h1 style="font-family: Lumos;">
+				<h1 class="texth">
 					Doongri Festival, Kullu
 				</h1>
 				<hr>
-				<p style="font-family: Mono;">
+				<p class="textp">
 					Doongri festival or Hadimba Devi fair is celebrated in Kullu in honor of and to celebrate Hadimba
 					Devi’s
 					(wife of Bhima) birthday. A huge fair is organized on this day; during the festival one can catch
@@ -388,12 +360,12 @@
 
 			<div data-aos="fade-left" data-aos-duration="3000" class="Description" id="d4">
 
-				<h1 style="font-family: Lumos;">
+				<h1 class="texth">
 					Lohri /Maghi
 				</h1>
 				<hr>
 
-				<p style="font-family: Mono;">
+				<p class="textp">
 					Lohri is a feisty festival celebrated by the people of Himachal Pradesh, Haryana and Punjab. In the
 					villages
 					of Punjab, Lohri is celebrated as a ceremonial ritual to jumpstart the harvesting of Rabi crop.
@@ -426,11 +398,11 @@
 
 			<div data-aos="fade-right" data-aos-duration="3000" class="Description" id="d5">
 
-				<h1 style="font-family: Lumos;">
+				<h1 class="texth">
 					Himachal Winter Carnival
 				</h1>
 				<hr>
-				<p style="font-family: Mono;">
+				<p class="textp">
 					To promote the culture of Himachal Pradesh, a winter carnival is organized every year in Manali.
 					Himachal
 					Pradesh started the trend of Winter Carnival back in 1977 and now after almost three decades the

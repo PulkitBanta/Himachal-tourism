@@ -4,7 +4,7 @@
 <head>
     <link rel="stylesheet" href="../../bootstrap/bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="../../jquery/jquery-3.3.1.js"></script>
+    <script src="../../ToursimWebProject/jquery-3.3.1.min.js"></script>
     <script src="../../bootstrap/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <!-- cdn for aos -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -14,58 +14,58 @@
 
     <style>
         /* Navbar Styling */
-
+        @font-face {
+            font-family: heading;
+            src: url(../../BeyondWonderland/BeyondWonderland.ttf);
+        }
+        @font-face {
+            font-family: para;
+            src: url(../../BeyondWonderland/arapey.italic.ttf);
+        }
+        @font-face {
+            font-family: nav;
+            src: url(../../BeyondWonderland/requiem.regular.ttf);
+        }
+        .texth{
+            font-family: heading;
+        }
+        .textp{
+            font-family: para;
+        }
         body {
-            font-family: ink free;
             scroll-snap-type: mandatory;
             scroll-snap-points-y: repeat(100vh);
             scroll-snap-type: y mandatory;
         }
-
         .navlinks:hover {
             background-color: transparent !important;
             text-decoration: none !important;
             color: rgb(235, 86, 160);
         }
-
         .fb:hover {
             color: #3b5998;
         }
-
         .gplus:hover {
             color: #d34836;
         }
-
         .insta:hover {
             color: #c13584;
         }
-
         .login:hover {
             color: rgb(35, 145, 235);
         }
-
         .signup:hover {
             color: rgb(243, 240, 79);
         }
-
         .navlinks {
             text-decoration: none;
             color: white;
-            font-family: mistral;
+            font-family: nav;
         }
-
         nav {
             margin-bottom: 0;
             background-color: rgba(20, 93, 95, 0.486);
         }
-
-        body {
-            margin: 0;
-            font-family: ink free;
-            scroll-snap-type: y mandatory;
-            overflow-y: scroll;
-        }
-
         #d1 {
             top: 20vh;
             /* margin-left:20vw; */
@@ -73,15 +73,13 @@
             min-height: 55vh;
             left: 10vw;
         }
-
         #d2 {
-            top: 6vh;
+            top: 9vh;
             /* margin-left:20vw; */
             width: 45vw;
             min-height: 75vh;
             right: 10vw;
         }
-
         #d3 {
             top: 4vh;
             /* margin-left:20vw; */
@@ -89,15 +87,13 @@
             min-height: 60vh;
             left: 10vw;
         }
-
         #d4 {
-            top: 2vh;
+            top: 4vh;
             /* margin-left:20vw; */
             width: 45vw;
             min-height: 75vh;
             right: 10vw;
         }
-
         .Description {
             z-index: 1;
             position: absolute;
@@ -105,16 +101,14 @@
             padding: 2%;
             color: white;
             font-size: 1.5vw;
-            font-family: Mono;
+            /* font-family: Mono; */
         }
-
         #s1 {
             right: 1vw;
             top: 20vh;
             background-image: url("Resources/Images/Picture1.png");
             left: 50vw;
         }
-
         #s2 {
             left: 1vw;
             right: 50vw;
@@ -124,7 +118,6 @@
             height: 80vh;
             background-image: url("https://www.t2india.com/Images/places/DHM/Attractions/A7R_1.jpg");
         }
-
         #s3 {
             right: 1vw;
             top: 16vh;
@@ -133,7 +126,6 @@
             border: 15px solid white;
             border-radius: 3px;
         }
-
         #s4 {
             left: 1vw;
             right: 50vw;
@@ -143,37 +135,27 @@
             height: 80vh;
             background-image: url("http://ttnotes.com/images/palace-chail-4.jpg");
         }
-
         .AboutSlider {
             width: auto;
-
-
             height: 70vh;
             padding: 1vw;
             position: absolute;
-
             background-size: cover;
             background-position: center;
             background-origin: center;
-
         }
-
         #slide5 {
             background-image: url(https://tritontravels.co.in/wp-content/uploads/2017/12/mountains_of_seraj_himachal_pradesh_india-1920x1080.jpg);
         }
-
         #slide2 {
             background-image: url(https://tritontravels.co.in/wp-content/uploads/2017/12/mountains_of_seraj_himachal_pradesh_india-1920x1080.jpg);
         }
-
         #slide3 {
             background-image: url(http://himachal.nic.in/images/photo-of-the-week/2018/mar/kumarsain.jpg);
         }
-
         #slide4 {
             background-image: url(http://www.hotelapplepie.com/blog/wp-content/uploads/2014/07/himalaya5.jpg);
         }
-
         .slide {
             background-attachment: fixed;
             background-position: center;
@@ -182,10 +164,7 @@
             overflow: hidden;
             position: relative;
         }
-
-
         .aboutUs {
-
             top: 50vh;
             left: -5vw;
             transform: rotate(-90deg);
@@ -193,35 +172,26 @@
             color: rgb(255, 255, 255);
             text-shadow: 2px 3px 10px black;
             /* horizontal position | vertical position | blur radius |color */
-
-
         }
-
         .aboutUsl {
             right: 0vw;
-
             top: 50vh;
-
             transform: rotate(90deg);
             position: absolute;
             color: rgb(255, 255, 255);
             text-shadow: 2px 3px 10px black;
             /* horizontal position | vertical position | blur radius |color */
         }
-
         .icon-bar {
             background-color: rgb(204, 48, 48) !important;
         }
-
         .form-control {
             width: 60% !important;
         }
-
         .margin {
             margin: 2vh !important;
             text-align: center;
         }
-
         section {
             /* border-bottom: 1px solid white; */
             /* padding: 1rem; */
@@ -234,33 +204,33 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header" style="padding-left:1vw;">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="../../ToursimWebProject/Index.html"><img style="width:25vw;"
-                        src="../res/logo.png"></a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav" style="padding: 3vh 0 2vh 2vw; font-size:2rem;">
-                    <li><a class="navlinks" href="fair and festivals.html">Fairs and Festivals</a></li>
-                    <li><a class="navlinks" href="eco tourism.html">EcoTourism</a></li>
-                    <li><a class="navlinks" href="fortsandmemorials.html">Forts And Memorials</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right" style="padding: 3vh 0 3vh 6vw; font-size:2rem;">
-                    <li><a class="navlinks fb" href="facebook.com"><i class="fa fa-facebook"></i></a></li>
-                    <li><a class="navlinks insta" href="instragram.com"><i class="fa fa-instagram"></i></a></li>
-                    <li><a class="navlinks gplus" href="google.com"><i class="fa fa-google-plus social"></i></a></li>
-                    <li><a data-target="#myModal" data-toggle="modal" class="navlinks signup" href="#"><i class="fa fa-user"></i> Sign Up</a></li>
-                    <li><a data-target="#myModal" data-toggle="modal" class="navlinks login" href="#"><i class="fa fa-lock"></i> Login</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+        <nav class="navbar navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-header" style="padding-left:1vw;">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="../../ToursimWebProject/Index.html"><img style="width:25vw;"
+                                src="../res/logo.png"></a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav" style="padding: 3vh 0 2vh 2vw; font-size:2rem;">
+                            <li><a class="navlinks" href="fair and festivals.html">Festivals</a></li>
+                            <li><a class="navlinks" href="eco tourism.html">EcoTourism</a></li>
+                            <li><a class="navlinks" href="fortsandmemorials.html">Forts</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right" style="padding: 3vh 0 3vh 6vw; font-size:2rem;">
+                                <li><a class="navlinks fb" href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                <li><a class="navlinks insta" href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                <li><a class="navlinks gplus" href="https://www.google.com/" target="_blank"><i class="fa fa-google-plus social"></i></a></li>
+                            <li><a data-target="#myModal" data-toggle="modal" class="navlinks signup" href="#"><i class="fa fa-user"></i> Sign Up</a></li>
+                              <li><a data-target="#myModal" data-toggle="modal" class="navlinks login" href="#"><i class="fa fa-lock"></i> Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
 
     <section>
         <div id="slide2" class="slide">
@@ -270,11 +240,11 @@
 
             <div class="Description container" id="d1">
 
-                <h1 style="font-family: Lumos;">
+                <h1 class="texth">
                     INTRODUCTION
                 </h1>
                 <hr>
-                <p style="font-family: Mono;">
+                <p class="textp">
                     Himachal Pradesh is often referred to as the land of Gods. It has also gained popularity owing to
                     the
                     enchanting diversity. Taking a heritage tour of the famous monuments of Himachal Pradesh will give a
@@ -303,11 +273,11 @@
         </div>
     </section>
 
-    <div>
+    <!-- <div>
         <span>
             <h1 style="text-align : center;font-family:Lumos;">FAMOUS FORTS AND MONUMENTS OF HIMACHAL PRADESH</h1>
         </span>
-    </div>
+    </div> -->
 
     <section>
         <div id="slide3" class="slide">
@@ -315,14 +285,14 @@
 
             <div data-aos="fade-left" data-aos-duration="3000" class="Description" id="d2">
 
-                <h1 style="font-family: Lumos;">
+                <h1 class="texth">
                         War Memorial
                 </h1>
                 <hr>
-                <p style="font-family: Mono;">
-                        Situated: (Shimla), Himachal Pradesh, India
-                        In the Fond Memory of: After Independence War Fare Heroes of (Himachal Pradesh)<br><br>
-                        The immense city of Dharamsala full of filled tranquility among abundant foliage and tall pine trees
+                <p class="textp">
+                        Situated: Dharamshala, Himachal Pradesh, India
+                        In the Fond Memory of: After Independence War Fare Heroes of Himachal Pradesh.<br><br>
+                        The immense city of Dharamshala full of filled tranquility among abundant foliage and tall pine trees
                         holds a
                         lot of history. At the entrance of the city lies the War Memorial to commemorate the Brave War
                         Heroes of
@@ -351,11 +321,11 @@
 
             <div data-aos="fade-right" data-aos-duration="3000" class="Description" id="d3">
 
-                <h1 style="font-family: Lumos;">
+                <h1 class="texth">
                         Rang Mahal
                 </h1>
                 <hr>
-                <p style="font-family: Mono;">
+                <p class="textp">
                         Hordes of tourists come to Chamba every year, to winess the beauty and historic content of the Rang
                         Mahal.
                         In the mid-eighteenth century, Umed Singh laid the foundation of the palace with the aim to serve as
@@ -389,12 +359,12 @@
 
             <div data-aos="fade-left" data-aos-duration="3000" class="Description" id="d4">
 
-                <h1 style="font-family: Lumos;">
+                <h1 class="texth">
                     Maharaja Palace
                 </h1>
                 <hr>
 
-                <p style="font-family: Mono;">
+                <p class="textp">
                         Among the hill resorts of Himalaya, Chail, built on a height of two thousand two hundred fifty m.,
                         is the
                         tiniest. On being barred from entering the Shimla, Patiala’s King Bhupinder Singh decided to get his
