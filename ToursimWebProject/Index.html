@@ -115,6 +115,7 @@
       background-size: cover;
       position: relative;
       background-attachment: fixed;
+      overflow: hidden;
       /* scroll-snap-align: start; */
     }
 
@@ -123,7 +124,7 @@
       background-image: linear-gradient("white");
       position: relative;
       scroll-snap-align: start;
-
+      overflow: hidden;
     }
 
     .DescriptionImage {
@@ -138,11 +139,11 @@
     }
 
     .Description {
-      position: relative;
+      position: absolute;
       padding: 2rem;
       background-image : linear-gradient(#ff9933 , green);
       left: 65vw;
-      width: 18vw;
+      width: 25vw;
       color: white;
       top: 20vh;
       font-size: 130%;
@@ -158,12 +159,14 @@
       background-size: cover;
       background-attachment: fixed;
       scroll-snap-align: start;
+      overflow: hidden;
     }
 
     #content {
       position: relative;
-      top: 30vh;
+      top: 15vh;
       margin: 0 5vw 0 6vw;
+      /* overflow: hidden; */
     }
 
     .listcontent {
@@ -181,7 +184,7 @@
     }
 
     .btn-link {
-      margin-left: 4vw;
+      margin-left: 30%;
       font-size: 120%;
     }
 
@@ -217,6 +220,10 @@
 
     .form-control {
       width: 60% !important;
+    }
+
+    .justify{
+      text-align: justify;
     }
   </style>
 
@@ -266,8 +273,8 @@
 
     </div>
     <div data-aos="fade-up-left" data-aos-duration="2500" class="Description">
-      <h2>About Tourism in HImachal Pradesh</h2>
-      <p>
+      <h2>About Tourism in Himachal Pradesh</h2>
+      <p class="justify">
         Himachal Pradesh is a northern Indian state in the Himalayas. It's home to scenic mountain towns and resorts
         such as Dalhousie. Host to the Dalai Lama, Himachal Pradesh has a strong Tibetan presence. This is reflected
         in its Buddhist temples and monasteries, as well as its vibrant Tibetan New Year celebrations. The region is
@@ -285,24 +292,25 @@
 
       <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2500" class="col-lg-3 listcontent">
         <h2 style="text-align:center">Treks or Camping</h2>
-        <p class="listbody">Camping is an outdoor activity involving overnight stays away from home in a shelter, such
+        <p class="listbody justify">Camping is an outdoor activity involving overnight stays away from home in a shelter, such
           as a tent. Typically participants leave developed areas to spend time outdoors in more natural ones in pursuit
           of activities providing them enjoyment. To be regarded as "camping" a minimum of one night is spent outdoors,
           distinguishing it from day-tripping, picnicking, and other similarly short-term recreational activities.
-          Camping can be enjoyed through all four seasons.
         </p>
-        <button class="btn btn-link"><a href="About.html">See more</a></button>
+        <br>
+        <!-- <button class="btn btn-link"><a href="About.html">See more</a></button> -->
       </div>
 
       <div data-aos="flip-down" data-aos-easing="ease-out-cubic" data-aos-duration="2500" class="col-lg-3 listcontent">
         <h2 style="text-align:center">Sight Seeing</h2>
-        <p class="listbody">Tourism is travel for pleasure or business; Tourism is cool also the theory and practice of
+        <p class="listbody justify">Tourism is travel for pleasure or business; Tourism is cool also the theory and practice of
           touring, the business of attracting, accommodating, and entertaining tourists, and the business of operating
           tours. Tourism may be international, or within the traveller's country. The World Tourism Organization
-          defines tourism more generally, in terms which go "beyond the common perception of tourism as being limited to
-          holiday activity only".
+          defines tourism more generally, in terms which go "beyond the common perception of tourism as being limited  to
+          holiday  activity  only".
         </p>
-        <button class="btn btn-link"><a href="About.html">See more</a></button>
+        <br>
+        <!-- <button class="btn btn-link"><a href="About.html">See more</a></button> -->
       </div>
 
       <div data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="2500" class="col-lg-3 listcontent">
@@ -313,7 +321,7 @@
           within the building in order to venerate the deity at the shrine. In classical temple architecture, the shrine
           may be synonymous with the cella.
         </p>
-        <button class="btn btn-link"><a href="About.html">See more</a></button>
+        <!-- <button class="btn btn-link"><a href="About.html">See more</a></button> -->
       </div>
 
     </div>

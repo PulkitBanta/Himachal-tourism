@@ -7,16 +7,20 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="jquery-3.3.1.min.js"></script>
   <script src="Bootstrap/js/bootstrap.min.js"></script>
+  <!-- cdn for aos -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- aos ends here ! -->
   <title>About Himachal</title>
 
   <style>
     /* Navbar Styling */
-
     body {
+      margin: 0;
       font-family: ink free;
       scroll-snap-type: y mandatory;
       overflow-y: scroll;
-    }
+    } 
 
     .navlinks:hover {
       background-color: transparent !important;
@@ -55,48 +59,115 @@
       background-color: rgba(20, 93, 95, 0.486);
     }
 
-    body {
-      margin: 0;
-      font-family: ink free;
-      scroll-snap-type: y mandatory;
-      overflow-y: scroll;
+    #d1{
+      top: 28vh;
+      /* margin-left:20vw; */
+      width: 45vw;
+      height: 55vh;
+      left: 10vw;
+    }
+    #d2{
+      top: 17.5vh;
+      /* margin-left:20vw; */
+      width: 45vw;
+      height: 75vh;
+      right: 10vw;
+    }
+    #d3{
+      top: 25vh;
+      /* margin-left:20vw; */
+      width: 45vw;
+      height: 60vh;
+      left: 10vw;
+    }
+    .Description {
+      z-index: 1;
+      position: absolute;
+      background-color: rgba(5, 0, 0, 0.767);
+      padding: 2%;
+      color: white;
+      font-size: 1.5vw;
+      font-family: Mono;
+    }
+    #s1{
+      right: 1vw;
+      top: 20vh;
+      background-image: url("Resources/Images/Picture1.png");
+      left: 50vw;
+    }
+    #s2{
+      left:1vw;
+      right:50vw;
+      top:15vh;
+      border:15px solid white;
+      border-radius:3px;
+      height: 80vh;
+      background-image: url("http://www.tripver.com/wp-content/uploads/2016/05/bigstock-Tent-in-the-hikers-camp-in-mou-49619450.jpg");
+    }
+    #s3{
+      right: 1vw;
+      top: 20vh;
+      background-image: url("https://i1.trekearth.com/photos/32262/a_bend_in_the_river.jpg");
+      left: 50vw;
+      border:15px solid white;
+      border-radius:3px;
+    }
+    .AboutSlider {
+      width: auto;
+      
+      
+      height: 70vh;
+      padding: 1vw;
+      position: absolute;
+      
+      background-size: cover;
+      background-position: center;
+      background-origin: center;
+      
     }
 
-    .slide1 {
+    #slide2 {
+      background-image: url(https://tritontravels.co.in/wp-content/uploads/2017/12/mountains_of_seraj_himachal_pradesh_india-1920x1080.jpg);
+      
+    }
+    #slide3{
+      background-image: url(http://himachal.nic.in/images/photo-of-the-week/2018/mar/kumarsain.jpg);
+    }
+    #slide4{
+      background-image: url(http://www.hotelapplepie.com/blog/wp-content/uploads/2014/07/himalaya5.jpg);
+    }
+    .slide{
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;
       height: 100vh;
-      width: 99vw;
-      background-image: url("Resources/Images/pahadi.jpg");
-    }
-
-    .main {
+      overflow: hidden;
       position: relative;
-      top: 17vh;
-      /* height : 80vh; */
-      width: 60vw;
-      text-align: center;
-      background-color: rgba(255, 228, 196, 0.884);
-      transition: ease-in-out 0.5s;
     }
 
-    .main h1 {
-      color: rgb(19, 172, 82);
-      padding: 2rem;
-    }
 
-    .description {
-      text-align: justify;
-      padding: 2rem 5rem 5rem 5rem;
-      font-size: 2rem;
-    }
+    .aboutUs {
 
-    .main h1:hover {
-      color: cadetblue;
-      transform: scale(1.13, 1.13);
-    }
+      top: 50vh;
+      left: -10vw;
+      transform: rotate(-90deg);
+      position: absolute;
+      color: rgb(255, 255, 255);
+      text-shadow: 2px 3px 10px black;
+      /* horizontal position | vertical position | blur radius |color */
 
-    .main:hover {
-      transform: scale(1.13, 1.13);
-      /* transition:ease-in-out 0.5s; */
+
+    }
+    .aboutUsl{
+      right:-10vw;
+      
+      top: 50vh;
+      
+      transform: rotate(90deg);
+      position: absolute;
+      color: rgb(255, 255, 255);
+      text-shadow: 2px 3px 10px black;
+      /* horizontal position | vertical position | blur radius |color */
     }
 
     .icon-bar {
@@ -111,66 +182,129 @@
       margin: 2vh !important;
       text-align: center;
     }
+    
   </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-fixed-top">
-        <div class="container-fluid">
-          <div class="navbar-header" style="padding-left:1vw;">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="Index.html"><img style="width:25vw;" src="Resources/Images/logo.png"></a>
-          </div>
-          <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav" style="padding: 3vh 0 2vh 2vw; font-size:2rem;">
-              <li><a class="navlinks" href="../Project/HTML/fair and festivals.html">Fairs and Festivals</a></li>
-              <li><a class="navlinks" href="../Project/HTML/eco tourism.html">EcoTourism</a></li>
-              <li><a class="navlinks" href="../Project/HTML/fortsandmemorials.html">Forts And Memorials</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right" style="padding: 3vh 0 3vh 6vw; font-size:2rem;">
-              <li><a class="navlinks fb" href="facebook.com"><i class="fa fa-facebook"></i></a></li>
-              <li><a class="navlinks insta" href="instragram.com"><i class="fa fa-instagram"></i></a></li>
-              <li><a class="navlinks gplus" href="google.com"><i class="fa fa-google-plus social"></i></a></li>
-              <li><a data-target="#myModal" data-toggle="modal" class="navlinks signup" href="#"><i class="fa fa-user"></i> Sign Up</a></li>
-              <li><a data-target="#myModal" data-toggle="modal" class="navlinks login" href="#"><i class="fa fa-lock"></i> Login</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-  <div class="background slide1">
-    <div class="container main">
-      <h1>About Himachal Pradesh</h1>
-      <p class="description">
-        Himachal Pradesh is a state in the northern part of
-        India. Situated in the Western Himalayas, it is bordered by states of Jammu and Kashmir on the north, Punjab on
-        the west, Haryana on the southwest, Uttarakhand on the southeast, and Tibet on the east. At its southernmost
-        point, it also touches the state of Uttar Pradesh. The state's name was coined by acharya Diwakar Datt Sharma,
-        one of the state's eminent Sanskrit scholars.
-
-        The predominantly mountainous region comprising the present day Himachal Pradesh has been inhabited since
-        pre-historic times having witnessed multiple waves of migration from other areas. Through its history, the
-        region was mostly ruled by local kingdoms some of which accepted suzerainty of larger empires. Prior to India's
-        independence from the British, Himachal comprised the hilly regions of Punjab Province of British India. After
-        independence, many of the hilly territories were organized as the Chief Commissioner's province of Himachal
-        Pradesh which later became a union territory. In 1966, hilly areas of neighboring Punjab state were merged into
-        Himachal and it was ultimately granted full statehood in 1972.
-
-        Himachal Pradesh is spread across valleys with many perennial rivers flowing through them. Almost 90% of the
-        state's population lives in rural areas. Agriculture, horticulture, hydropower and tourism are important
-        constituents of the state's economy. The hilly state is almost universally electrified with 99.5% of the
-        households having electricity as of 2016. The state was declared India's second open-defecation free state in
-        2016. According to a survey of CMS - India Corruption Study 2017, Himachal Pradesh is India's least corrupt
-        state.
-      </p>
+  <nav class="navbar navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header" style="padding-left:1vw;">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="Index.html"><img style="width:25vw;" src="Resources/Images/logo.png"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav" style="padding: 3vh 0 2vh 2vw; font-size:2rem;">
+          <li><a class="navlinks" href="../Project/HTML/fair and festivals.html">Fairs and Festivals</a></li>
+          <li><a class="navlinks" href="../Project/HTML/eco tourism.html">EcoTourism</a></li>
+          <li><a class="navlinks" href="../Project/HTML/fortsandmemorials.html">Forts And Memorials</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right" style="padding: 3vh 0 3vh 6vw; font-size:2rem;">
+          <li><a class="navlinks fb" href="facebook.com"><i class="fa fa-facebook"></i></a></li>
+          <li><a class="navlinks insta" href="instragram.com"><i class="fa fa-instagram"></i></a></li>
+          <li><a class="navlinks gplus" href="google.com"><i class="fa fa-google-plus social"></i></a></li>
+          <li><a data-target="#myModal" data-toggle="modal" class="navlinks signup" href="#"><i class="fa fa-user"></i>Sign Up</a></li>
+          <li><a data-target="#myModal" data-toggle="modal" class="navlinks login" href="#"><i class="fa fa-lock"></i>Login</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-<!-- Modal to be displayed -->
-<div class="modal fade" id="myModal" role="dialog">
+  </nav>
+
+  <section>
+    <div id="slide2" class="slide">
+      <span class="aboutUs">
+        <h1 style="font-size:3vw;font-family:Lumos;">About Himachal Pradesh</h1>
+      </span>
+  
+      <div class="Description" id="d1">
+  
+        <h1 style="font-family: Lumos;">
+          Himachal Pradesh
+        </h1>
+        <hr>
+        <p style="font-family: Mono;">
+          Himachal Pradesh is a state in the northern part of
+          India. Situated in the Western Himalayas, it is bordered by states of Jammu and Kashmir on the north, Punjab on
+          the west, Haryana on the southwest, Uttarakhand on the southeast, and Tibet on the east. At its southernmost
+          point, it also touches the state of Uttar Pradesh. The state's name was coined by acharya Diwakar Datt Sharma,
+          one of the state's eminent Sanskrit scholars.
+        </p>
+  
+      </div>
+  
+      <div class="AboutSlider" id="s1">
+      </div>
+  
+    </div>
+  </section>
+
+
+  <section>
+    <div id="slide3" class="slide">
+      <span class="aboutUsl">
+        <h1 style="font-size:3vw;font-family:Lumos;">About Himachal Pradesh</h1>
+      </span>
+  
+      <div data-aos="fade-left" data-aos-duration="3000" class="Description" id="d2">
+  
+        <h1 style="font-family: Lumos;">
+          Himachal Pradesh
+        </h1>
+        <hr>
+        <p style="font-family: Mono;">
+          The predominantly mountainous region comprising the present day Himachal Pradesh has been inhabited since
+          pre-historic times having witnessed multiple waves of migration from other areas. Through its history, the
+          region was mostly ruled by local kingdoms some of which accepted suzerainty of larger empires. Prior to India's
+          independence from the British, Himachal comprised the hilly regions of Punjab Province of British India. After
+          independence, many of the hilly territories were organized as the Chief Commissioner's province of Himachal
+          Pradesh which later became a union territory. In 1966, hilly areas of neighboring Punjab state were merged into
+          Himachal and it was ultimately granted full statehood in 1972.
+        </p>
+  
+      </div>
+      <div class="AboutSlider" id="s2">
+  
+  
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div id="slide4" class="slide">
+      <span class="aboutUs">
+        <h1 style="font-size:3vw;font-family:Lumos;">About Himachal Pradesh</h1>
+      </span>
+  
+      <div data-aos="fade-right" data-aos-duration="3000" class="Description" id="d3">
+  
+        <h1 style="font-family: Lumos;">
+          Himachal Pradesh
+        </h1>
+        <hr>
+        <p style="font-family: Mono;">
+          Himachal Pradesh is spread across valleys with many perennial rivers flowing through them. Almost 90% of the
+          state's population lives in rural areas. Agriculture, horticulture, hydropower and tourism are important
+          constituents of the state's economy. The hilly state is almost universally electrified with 99.5% of the
+          households having electricity as of 2016. The state was declared India's second open-defecation free state in
+          2016. According to a survey of CMS - India Corruption Study 2017, Himachal Pradesh is India's least corrupt
+          state.
+        </p>
+      </div>
+  
+      <div class="AboutSlider" id="s3">
+      </div>
+      
+    </div>
+  </section>
+  
+
+
+  <!-- Modal to be displayed -->
+  <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
       <div class="modal-content">
         <!--Header of Modal-->
@@ -233,6 +367,10 @@
       </div>
     </div>
   </div>
+
+  <script>
+		AOS.init();
+	</script>
 </body>
 
 </html>
