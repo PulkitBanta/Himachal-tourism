@@ -1,520 +1,596 @@
 <html>
-<title>Fair and Festivals: Himachal Tourism</title>
+  <title>Fair and Festivals: Himachal Tourism</title>
 
-<head>
-	<link rel="stylesheet" href="../../bootstrap/bootstrap-3.3.7-dist/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script src="../../ToursimWebProject/jquery-3.3.1.min.js"></script>
-	<script src="../../bootstrap/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-	<!-- cdn for aos -->
-	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-	<!-- aos ends here ! -->
-	<title>Fair and Festivals</title>
+  <head>
+    <link
+      rel="stylesheet"
+      href="../../bootstrap/bootstrap-3.3.7-dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="../../ToursimWebProject/jquery-3.3.1.min.js"></script>
+    <script src="../../bootstrap/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <!-- cdn for aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- aos ends here ! -->
+    <title>Fair and Festivals</title>
 
-	<style>
-		@font-face {
-            font-family: heading;
-            src: url(../../BeyondWonderland/BeyondWonderland.ttf);
-        }
-        @font-face {
-            font-family: para;
-            src: url(../../BeyondWonderland/arapey.italic.ttf);
-        }
-        @font-face {
-            font-family: nav;
-            src: url(../../BeyondWonderland/requiem.regular.ttf);
-        }
-        .texth{
-            font-family: heading;
-        }
-        .textp{
-            font-family: para;
-        }
-		/* Navbar Styling */
-		body {
-			margin: 0;
-			scroll-snap-type: mandatory;
-			scroll-snap-points-y: repeat(100vh);
-			scroll-snap-type: y mandatory;
-		}
-		.navlinks:hover {
-			background-color: transparent !important;
-			text-decoration: none !important;
-			color: rgb(235, 86, 160);
-		}
-		.fb:hover {
-			color: #3b5998;
-		}
-		.gplus:hover {
-			color: #d34836;
-		}
-		.insta:hover {
-			color: #c13584;
-		}
-		.login:hover {
-			color: rgb(35, 145, 235);
-		}
-		.signup:hover {
-			color: rgb(243, 240, 79);
-		}
-		.navlinks {
-			text-decoration: none;
-			color: white;
-			font-family: nav;
-		}
-		nav {
-			margin-bottom: 0;
-			background-color: rgba(20, 93, 95, 0.486);
-		}
-		#d1 {
-			top: 20vh;
-			/* margin-left:20vw; */
-			/* width: 45vw; */
-			min-height: 55vh;
-			left: 10vw;
-		}
-		#d2 {
-			top: 7vh;
-			/* margin-left:20vw; */
-			width: 45vw;
-			min-height: 75vh;
-			right: 10vw;
-		}
-		#d3 {
-			top: 4vh;
-			/* margin-left:20vw; */
-			width: 45vw;
-			min-height: 60vh;
-			left: 10vw;
-		}
-		#d4 {
-			top: 6vh;
-			/* margin-left:20vw; */
-			width: 45vw;
-			min-height: 75vh;
-			right: 10vw;
-		}
-		#d5 {
-			top: 6vh;
-			/* margin-left:20vw; */
-			width: 45vw;
-			min-height: 60vh;
-			left: 10vw;
-		}
-		.Description {
-			z-index: 1;
-			position: absolute;
-			background-color: rgba(5, 0, 0, 0.767);
-			padding: 2%;
-			color: white;
-			font-size: 1.5vw;
-			font-family: Mono;
-		}
-		#s1 {
-			right: 1vw;
-			top: 20vh;
-			background-image: url("Resources/Images/Picture1.png");
-			left: 50vw;
-		}
-		#s2 {
-			left: 1vw;
-			right: 50vw;
-			top: 10vh;
-			border: 15px solid white;
-			border-radius: 3px;
-			height: 80vh;
-			background-image: url("https://i.ytimg.com/vi/8VnRZRWBeto/maxresdefault.jpg");
-		}
-		#s3 {
-			right: 1vw;
-			top: 12.5vh;
-			background-image: url("https://www.t2india.com/includes/images/indian-festival-kullu-dussehra-mobile.jpg");
-			left: 50vw;
-			border: 15px solid white;
-			border-radius: 3px;
-		}
-		#s4 {
-			left: 1vw;
-			right: 50vw;
-			top: 10vh;
-			border: 15px solid white;
-			border-radius: 3px;
-			height: 80vh;
-			background-image: url("https://www.makemytrip.com/travel-guide/media/dg_image/jammu/Lohri.jpg");
-		}
-		#s5 {
-			right: 1vw;
-			top: 15vh;
-			background-image: url("https://images.tribuneindia.com/cms/gall_content/2019/1/2019_1$largeimg31_Thursday_2019_120424078.JPG");
-			left: 50vw;
-			border: 15px solid white;
-			border-radius: 3px;
-		}
-		.AboutSlider {
-			width: auto;
-			height: 70vh;
-			padding: 1vw;
-			position: absolute;
-			background-size: cover;
-			background-position: center;
-			background-origin: center;
-		}
-		#slide5 {
-			background-image: url(https://tritontravels.co.in/wp-content/uploads/2017/12/mountains_of_seraj_himachal_pradesh_india-1920x1080.jpg);
-		}
-		#slide2 {
-			background-image: url(https://tritontravels.co.in/wp-content/uploads/2017/12/mountains_of_seraj_himachal_pradesh_india-1920x1080.jpg);
-		}
-		#slide3 {
-			background-image: url(http://himachal.nic.in/images/photo-of-the-week/2018/mar/kumarsain.jpg);
-		}
-		#slide4 {
-			background-image: url(http://www.hotelapplepie.com/blog/wp-content/uploads/2014/07/himalaya5.jpg);
-		}
-		.slide {
-			background-attachment: fixed;
-			background-position: center;
-			background-size: cover;
-			height: 100vh;
-			overflow: hidden;
-			position: relative;
-		}
-		.aboutUs {
-			top: 50vh;
-			left: -5vw;
-			transform: rotate(-90deg);
-			position: absolute;
-			color: rgb(255, 255, 255);
-			text-shadow: 2px 3px 10px black;
-			/* horizontal position | vertical position | blur radius |color */
-		}
-		.aboutUsl {
-			right: 0vw;
-			top: 50vh;
-			transform: rotate(90deg);
-			position: absolute;
-			color: rgb(255, 255, 255);
-			text-shadow: 2px 3px 10px black;
-			/* horizontal position | vertical position | blur radius |color */
-		}
-		.icon-bar {
-			background-color: rgb(204, 48, 48) !important;
-		}
-		.form-control {
-			width: 60% !important;
-		}
-		.margin {
-			margin: 2vh !important;
-			text-align: center;
-		}
-		section {
-			/* border-bottom: 1px solid white; */
-			/* padding: 1rem; */
-			/* height: 100vh; */
-			scroll-snap-align: start;
-			/* text-align: center; */
-			position: relative;
-		}
-	</style>
-</head>
+    <style>
+      @font-face {
+        font-family: heading;
+        src: url(../../BeyondWonderland/BeyondWonderland.ttf);
+      }
+      @font-face {
+        font-family: para;
+        src: url(../../BeyondWonderland/arapey.italic.ttf);
+      }
+      @font-face {
+        font-family: nav;
+        src: url(../../BeyondWonderland/requiem.regular.ttf);
+      }
+      .texth {
+        font-family: heading;
+      }
+      .textp {
+        font-family: para;
+      }
+      /* Navbar Styling */
+      body {
+        margin: 0;
+        scroll-snap-type: mandatory;
+        scroll-snap-points-y: repeat(100vh);
+        scroll-snap-type: y mandatory;
+      }
+      .navlinks:hover {
+        background-color: transparent !important;
+        text-decoration: none !important;
+        color: rgb(235, 86, 160);
+      }
+      .fb:hover {
+        color: #3b5998;
+      }
+      .gplus:hover {
+        color: #d34836;
+      }
+      .insta:hover {
+        color: #c13584;
+      }
+      .login:hover {
+        color: rgb(35, 145, 235);
+      }
+      .signup:hover {
+        color: rgb(243, 240, 79);
+      }
+      .navlinks {
+        text-decoration: none;
+        color: white;
+        font-family: nav;
+      }
+      nav {
+        margin-bottom: 0;
+        background-color: rgba(20, 93, 95, 0.486);
+      }
+      #d1 {
+        top: 20vh;
+        /* margin-left:20vw; */
+        /* width: 45vw; */
+        min-height: 55vh;
+        left: 10vw;
+      }
+      #d2 {
+        top: 7vh;
+        /* margin-left:20vw; */
+        width: 45vw;
+        min-height: 75vh;
+        right: 10vw;
+      }
+      #d3 {
+        top: 4vh;
+        /* margin-left:20vw; */
+        width: 45vw;
+        min-height: 60vh;
+        left: 10vw;
+      }
+      #d4 {
+        top: 6vh;
+        /* margin-left:20vw; */
+        width: 45vw;
+        min-height: 75vh;
+        right: 10vw;
+      }
+      #d5 {
+        top: 6vh;
+        /* margin-left:20vw; */
+        width: 45vw;
+        min-height: 60vh;
+        left: 10vw;
+      }
+      .Description {
+        z-index: 1;
+        position: absolute;
+        background-color: rgba(5, 0, 0, 0.767);
+        padding: 2%;
+        color: white;
+        font-size: 1.5vw;
+        font-family: Mono;
+      }
+      #s1 {
+        right: 1vw;
+        top: 20vh;
+        background-image: url("Resources/Images/Picture1.png");
+        left: 50vw;
+      }
+      #s2 {
+        left: 1vw;
+        right: 50vw;
+        top: 10vh;
+        border: 15px solid white;
+        border-radius: 3px;
+        height: 80vh;
+        background-image: url("https://i.ytimg.com/vi/8VnRZRWBeto/maxresdefault.jpg");
+      }
+      #s3 {
+        right: 1vw;
+        top: 12.5vh;
+        background-image: url("https://www.t2india.com/includes/images/indian-festival-kullu-dussehra-mobile.jpg");
+        left: 50vw;
+        border: 15px solid white;
+        border-radius: 3px;
+      }
+      #s4 {
+        left: 1vw;
+        right: 50vw;
+        top: 10vh;
+        border: 15px solid white;
+        border-radius: 3px;
+        height: 80vh;
+        background-image: url("https://www.makemytrip.com/travel-guide/media/dg_image/jammu/Lohri.jpg");
+      }
+      #s5 {
+        right: 1vw;
+        top: 15vh;
+        background-image: url("https://images.tribuneindia.com/cms/gall_content/2019/1/2019_1$largeimg31_Thursday_2019_120424078.JPG");
+        left: 50vw;
+        border: 15px solid white;
+        border-radius: 3px;
+      }
+      .AboutSlider {
+        width: auto;
+        height: 70vh;
+        padding: 1vw;
+        position: absolute;
+        background-size: cover;
+        background-position: center;
+        background-origin: center;
+      }
+      #slide5 {
+        background-image: url(https://tritontravels.co.in/wp-content/uploads/2017/12/mountains_of_seraj_himachal_pradesh_india-1920x1080.jpg);
+      }
+      #slide2 {
+        background-image: url(https://tritontravels.co.in/wp-content/uploads/2017/12/mountains_of_seraj_himachal_pradesh_india-1920x1080.jpg);
+      }
+      #slide3 {
+        background-image: url(http://himachal.nic.in/images/photo-of-the-week/2018/mar/kumarsain.jpg);
+      }
+      #slide4 {
+        background-image: url(http://www.hotelapplepie.com/blog/wp-content/uploads/2014/07/himalaya5.jpg);
+      }
+      .slide {
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+      }
+      .aboutUs {
+        top: 50vh;
+        left: -5vw;
+        transform: rotate(-90deg);
+        position: absolute;
+        color: rgb(255, 255, 255);
+        text-shadow: 2px 3px 10px black;
+        /* horizontal position | vertical position | blur radius |color */
+      }
+      .aboutUsl {
+        right: 0vw;
+        top: 50vh;
+        transform: rotate(90deg);
+        position: absolute;
+        color: rgb(255, 255, 255);
+        text-shadow: 2px 3px 10px black;
+        /* horizontal position | vertical position | blur radius |color */
+      }
+      .icon-bar {
+        background-color: rgb(204, 48, 48) !important;
+      }
+      .form-control {
+        width: 60% !important;
+      }
+      .margin {
+        margin: 2vh !important;
+        text-align: center;
+      }
+      section {
+        /* border-bottom: 1px solid white; */
+        /* padding: 1rem; */
+        /* height: 100vh; */
+        scroll-snap-align: start;
+        /* text-align: center; */
+        position: relative;
+      }
+    </style>
+  </head>
 
-<body>
-	<nav class="navbar navbar-fixed-top">
-		<div class="container-fluid">
-			<div class="navbar-header" style="padding-left:1vw;">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="../../ToursimWebProject/Index.html"><img style="width:25vw;"
-						src="../res/logo.png"></a>
-			</div>
-			<div class="collapse navbar-collapse" id="myNavbar">
-				<ul class="nav navbar-nav" style="padding: 3vh 0 2vh 2vw; font-size:2rem;">
-					<li><a class="navlinks" href="fair and festivals.html">Festivals</a></li>
-					<li><a class="navlinks" href="eco tourism.html">EcoTourism</a></li>
-					<li><a class="navlinks" href="fortsandmemorials.html">Forts</a></li>
-				</ul>
-				<ul class="nav navbar-nav navbar-right" style="padding: 3vh 0 3vh 6vw; font-size:2rem;">
-						<li><a class="navlinks fb" href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-						<li><a class="navlinks insta" href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-						<li><a class="navlinks gplus" href="https://www.google.com/" target="_blank"><i class="fa fa-google-plus social"></i></a></li>
-					<li><a data-target="#myModal" data-toggle="modal" class="navlinks signup" href="#"><i class="fa fa-user"></i> Sign Up</a></li>
-          			<li><a data-target="#myModal" data-toggle="modal" class="navlinks login" href="#"><i class="fa fa-lock"></i> Login</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+  <body>
+    <nav class="navbar navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header" style="padding-left: 1vw">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#myNavbar"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../index.html">
+            <img style="width: 20vw" src="../res/logo.png" />
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul
+            class="nav navbar-nav"
+            style="padding: 3vh 0 2vh 2vw; font-size: 2rem"
+          >
+            <li>
+              <a class="navlinks" href="fair and festivals.html">Festivals</a>
+            </li>
+            <li><a class="navlinks" href="eco tourism.html">EcoTourism</a></li>
+            <li><a class="navlinks" href="fortsandmemorials.html">Forts</a></li>
+          </ul>
+          <ul
+            class="nav navbar-nav navbar-right"
+            style="padding: 3vh 0 3vh 6vw; font-size: 2rem"
+          >
+            <li>
+              <a
+                class="navlinks fb"
+                href="https://www.facebook.com/"
+                target="_blank"
+                ><i class="fa fa-facebook"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                class="navlinks insta"
+                href="https://www.instagram.com/"
+                target="_blank"
+                ><i class="fa fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                class="navlinks gplus"
+                href="https://www.google.com/"
+                target="_blank"
+                ><i class="fa fa-google-plus social"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                data-target="#myModal"
+                data-toggle="modal"
+                class="navlinks signup"
+                href="#"
+                ><i class="fa fa-user"></i> Sign Up</a
+              >
+            </li>
+            <li>
+              <a
+                data-target="#myModal"
+                data-toggle="modal"
+                class="navlinks login"
+                href="#"
+                ><i class="fa fa-lock"></i> Login</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-	<section>
-		<div id="slide2" class="slide">
-			<!-- <span class="aboutUs">
+    <section>
+      <div id="slide2" class="slide">
+        <!-- <span class="aboutUs">
 					<h1 style="font-size:3vw;font-family:Lumos;">ECO TOURISM</h1>
 				</span> -->
 
-			<div class="Description container" id="d1">
+        <div class="Description container" id="d1">
+          <h1 class="texth">Fair and Festivals of Himachal Pradesh</h1>
+          <hr />
+          <p class="textp">
+            There are 20 state level fairs or festivals recognised by the the
+            Government at present in Himachal Pradesh. They have an educational,
+            social as well as religious character. These serve the needs of
+            social integration not only for economic sustenance but also for
+            cultural survival. Generally the fairs are held at such a time when
+            the people are free from their household engagements. Fairs give
+            them an opportunity to purchase and sell needed articles. Traders
+            from far and near join these festivals to display articles like
+            clothes, wool, pashmina, furs, leather, hides and skins, pottery,
+            metal ware, jewellery, ornaments, fruits, vegetables and many other
+            local products coming from the homes and fields of the
+            ruralities.Fairs in Himachal Pradesh have very positive role to play
+            in social life. Himachal is a land of Devi and Devtas - land of gods
+            and most of the fairs are of mythological nature. But to keep on
+            rhythm in various walks of life, fairs have occupied predominant
+            role and aquired varied dimensions, such as trade, agricultural,
+            seasonal and fairs connected with festivals etc. So intensive the
+            fairs hava become, that people of all shades and interests
+            participate in large numbers. There is hardly any village where no
+            fair is held. There is almost continuous succession of fairs.
+          </p>
+        </div>
+      </div>
+    </section>
 
-				<h1 class="texth">
-					Fair and Festivals of Himachal Pradesh
-				</h1>
-				<hr>
-				<p class="textp">
-					There are 20 state level fairs or festivals recognised by the the Government at present in Himachal
-					Pradesh. They have an educational, social as well as religious character. These serve the needs of
-					social integration not only for economic sustenance but also for cultural survival. Generally the
-					fairs are held at such a time when the people are free from their household engagements. Fairs give
-					them an opportunity to purchase and sell needed articles. Traders from far and near join these
-					festivals to display articles like clothes, wool, pashmina, furs, leather, hides and skins, pottery,
-					metal ware, jewellery, ornaments, fruits, vegetables and many other local products coming from the
-					homes and fields of the ruralities.Fairs in Himachal Pradesh have very positive role to play in
-					social life. Himachal is a land of Devi and Devtas - land of gods and most of the fairs are of
-					mythological nature. But to keep on rhythm in various walks of life, fairs have occupied predominant
-					role and aquired varied dimensions, such as trade, agricultural, seasonal and fairs connected with
-					festivals etc. So intensive the fairs hava become, that people of all shades and interests
-					participate in large numbers. There is hardly any village where no fair is held. There is almost
-					continuous succession of fairs.
-				</p>
+    <section>
+      <div id="slide3" class="slide">
+        <div
+          data-aos="fade-left"
+          data-aos-duration="3000"
+          class="Description"
+          id="d2"
+        >
+          <h1 class="texth">Halda festival : Welcome the New Year</h1>
+          <hr />
+          <p class="textp">
+            Dedicated to the goddess of wealth, Shashikar Apa, Halda festival is
+            celebrated with great zeal and enthusiasm in order to celebrate the
+            new year. The actual date of the celebration is decided by the
+            Lamas. People of Lahaul districts come together and enjoy their new
+            year by performing music. Lamas also choose a different site to
+            execute an old ritual as per which, every household carries few
+            branches of a cedar tree to perform a bonfire. The bonfire signifies
+            the unity of the community. It is more popular in the valleys of
+            Keylong, River Chandra and River Bhaga.
+            <br /><br />When: January <br />Where: Lahaul district <br />Special
+            Attraction: Dancing Acts, Musicals <br />Duration of Festival: 2
+            Days
+          </p>
+        </div>
+        <div class="AboutSlider" id="s2"></div>
+      </div>
+    </section>
 
-			</div>
-
-		</div>
-	</section>
-
-	<section>
-		<div id="slide3" class="slide">
-
-
-			<div data-aos="fade-left" data-aos-duration="3000" class="Description" id="d2">
-
-				<h1 class="texth">
-					Halda festival : Welcome the New Year
-				</h1>
-				<hr>
-				<p class="textp">
-					Dedicated to the goddess of wealth, Shashikar Apa, Halda festival is celebrated with great zeal and
-					enthusiasm in order to celebrate the new year. The actual date of the celebration is decided by the
-					Lamas.
-					People of Lahaul districts come together and enjoy their new year by performing music.
-					Lamas also choose a different site to execute an old ritual as per which, every household carries
-					few
-					branches of a cedar tree to perform a bonfire. The bonfire signifies the unity of the community. It
-					is more
-					popular in the valleys of Keylong, River Chandra and River Bhaga.
-					<br><br>When: January
-					<br>Where: Lahaul district
-					<br>Special Attraction: Dancing Acts, Musicals
-					<br>Duration of Festival: 2 Days
-				</p>
-
-			</div>
-			<div class="AboutSlider" id="s2">
-			</div>
-		</div>
-	</section>
-
-
-	<section>
-		<div id="slide4" class="slide">
-			<!-- <span class="aboutUs">
+    <section>
+      <div id="slide4" class="slide">
+        <!-- <span class="aboutUs">
 			<h1 style="font-size:3vw;font-family:Lumos;">About Himachal Pradesh</h1>
 		  </span> -->
 
-			<div data-aos="fade-right" data-aos-duration="3000" class="Description" id="d3">
+        <div
+          data-aos="fade-right"
+          data-aos-duration="3000"
+          class="Description"
+          id="d3"
+        >
+          <h1 class="texth">Doongri Festival, Kullu</h1>
+          <hr />
+          <p class="textp">
+            Doongri festival or Hadimba Devi fair is celebrated in Kullu in
+            honor of and to celebrate Hadimba Devi's (wife of Bhima) birthday. A
+            huge fair is organized on this day; during the festival one can
+            catch glimpses of dance and musical performances by local artists.
+            Since the festival is celebrated on 'Basant Panchami', one can see
+            colourful flowers blooming on Kullu valley. Moreover, little
+            colorful kites also cover the skies to mark the spring festival,
+            termed as “Basant Panchami.” Freshness, aroma, and vibrancy of
+            flowers all around the valley gives the tourist the most blissful
+            time of their lives.
+            <br /><br />When: May <br />Where: Kullu <br />Special Attraction:
+            Folk dance and music performances by the local artist <br />Duration
+            of Festival: 1 Day
+          </p>
+        </div>
 
-				<h1 class="texth">
-					Doongri Festival, Kullu
-				</h1>
-				<hr>
-				<p class="textp">
-					Doongri festival or Hadimba Devi fair is celebrated in Kullu in honor of and to celebrate Hadimba
-					Devi’s
-					(wife of Bhima) birthday. A huge fair is organized on this day; during the festival one can catch
-					glimpses
-					of dance and musical performances by local artists. Since the festival is celebrated on ‘Basant
-					Panchami’,
-					one can see colourful flowers blooming on Kullu valley. Moreover, little colorful kites also cover
-					the skies
-					to mark the spring festival, termed as “Basant Panchami.” Freshness, aroma, and vibrancy of flowers
-					all
-					around the valley gives the tourist the most blissful time of their lives.
-					<br><br>When: May
-					<br>Where: Kullu
-					<br>Special Attraction: Folk dance and music performances by the local artist
-					<br>Duration of Festival: 1 Day
-				</p>
-			</div>
+        <div class="AboutSlider" id="s3"></div>
+      </div>
+    </section>
 
-			<div class="AboutSlider" id="s3">
-			</div>
-
-		</div>
-	</section>
-
-	<section>
-		<div id="slide5" class="slide">
-			<!-- <span class="aboutUsl">
+    <section>
+      <div id="slide5" class="slide">
+        <!-- <span class="aboutUsl">
 				<h1 style="font-size:3vw;font-family:Lumos;">The Greens</h1>
 			  </span> -->
 
-			<div data-aos="fade-left" data-aos-duration="3000" class="Description" id="d4">
+        <div
+          data-aos="fade-left"
+          data-aos-duration="3000"
+          class="Description"
+          id="d4"
+        >
+          <h1 class="texth">Lohri /Maghi</h1>
+          <hr />
 
-				<h1 class="texth">
-					Lohri /Maghi
-				</h1>
-				<hr>
+          <p class="textp">
+            Lohri is a feisty festival celebrated by the people of Himachal
+            Pradesh, Haryana and Punjab. In the villages of Punjab, Lohri is
+            celebrated as a ceremonial ritual to jumpstart the harvesting of
+            Rabi crop. Lohri festival is famous by the name of Maghu as well
+            because it coincides with the onset of 'Magh' month which commences
+            just a day before. On this festival, people dress in vibrant clothes
+            and prepare dance performances. Children sing folk songs and go door
+            to door, especially to the newly married couples consciously to
+            collect funds for community bonfire. Around dusk, people from
+            different households come together and lit a bonfire. People throw
+            pop cans and puffed rice in the flames as a way of offering
+            sacrifice to God so that they get blessed with a rich harvest.
+            People from different communities come together for the grand holy
+            celebration. On the whole, Lohri celebrates oneness and encourages
+            people to rise above personal differences.
+          </p>
+        </div>
+        <div class="AboutSlider" id="s4"></div>
+      </div>
+    </section>
 
-				<p class="textp">
-					Lohri is a feisty festival celebrated by the people of Himachal Pradesh, Haryana and Punjab. In the
-					villages
-					of Punjab, Lohri is celebrated as a ceremonial ritual to jumpstart the harvesting of Rabi crop.
-					Lohri
-					festival is famous by the name of Maghu as well because it coincides with the onset of 'Magh' month
-					which
-					commences just a day before.
-					On this festival, people dress in vibrant clothes and prepare dance performances. Children sing folk
-					songs
-					and go door to door, especially to the newly married couples consciously to collect funds for
-					community
-					bonfire. Around dusk, people from different households come together and lit a bonfire. People throw
-					pop
-					cans and puffed rice in the flames as a way of offering sacrifice to God so that they get blessed
-					with a
-					rich harvest. People from different communities come together for the grand holy celebration. On the
-					whole,
-					Lohri celebrates oneness and encourages people to rise above personal differences.
-				</p>
+    <section>
+      <div id="slide3" class="slide">
+        <div
+          data-aos="fade-right"
+          data-aos-duration="3000"
+          class="Description"
+          id="d5"
+        >
+          <h1 class="texth">Himachal Winter Carnival</h1>
+          <hr />
+          <p class="textp">
+            To promote the culture of Himachal Pradesh, a winter carnival is
+            organized every year in Manali. Himachal Pradesh started the trend
+            of Winter Carnival back in 1977 and now after almost three decades
+            the festival has become bigger and better! During this festival, the
+            ski slopes of Manali are invaded by adventure enthusiasts. Another
+            major highlight of the festival is the beauty contest known as the
+            "Winter Queen" and "Mr. Manali" A procession is also organized from
+            the Hadimba Devi temple. The complete stretch of Manali mall road
+            looks like a carnival. Right from folk dance to entertaining skits,
+            a lot of things can be explored in this festival. People on a tour
+            to Himachal Pradesh can't afford to miss the Himachal Winter
+            Carnival. Other than enjoying the Himachal Winter Carnival in
+            Manali, tourists have an opportunity to visit The Manacle Gompa,
+            Vashisht Springs, Jagatsukh, Manu Temple and Hadimba Temple.
+          </p>
+        </div>
+        <div class="AboutSlider" id="s5"></div>
+      </div>
+    </section>
 
-			</div>
-			<div class="AboutSlider" id="s4">
-			</div>
-		</div>
-	</section>
+    <!-- Modal to be displayed -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!--Header of Modal-->
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+            <h4 style="text-align: center" class="modal-title text-success">
+              Log In for New Updates
+            </h4>
+          </div>
+          <!--Modal Body-->
+          <div class="modal-body">
+            <ul class="nav nav-tabs">
+              <li class="active">
+                <a data-toggle="tab" href="#logIn">Log In</a>
+              </li>
+              <li><a data-toggle="tab" href="#signUp">Sign Up</a></li>
+            </ul>
 
-	<section>
-		<div id="slide3" class="slide">
+            <div class="tab-content">
+              <div id="logIn" class="tab-pane fade in active">
+                <div class="margin">
+                  <form>
+                    <div class="form-group">
+                      <input
+                        style="width: 70%"
+                        type="email"
+                        id="email"
+                        placeholder="Enter email"
+                      />
+                    </div>
 
+                    <div class="form-group">
+                      <input
+                        style="width: 70%"
+                        type="password"
+                        id="pwd"
+                        placeholder="Enter password"
+                      />
+                    </div>
 
-			<div data-aos="fade-right" data-aos-duration="3000" class="Description" id="d5">
+                    <button
+                      style="width: 70%"
+                      type="submit"
+                      class="btn btn-success"
+                    >
+                      Log In
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div id="signUp" class="tab-pane fade">
+                <div class="margin">
+                  <form>
+                    <div class="form-group">
+                      <input
+                        style="width: 70%"
+                        type="text"
+                        id="userName"
+                        placeholder="Enter your name"
+                      />
+                    </div>
 
-				<h1 class="texth">
-					Himachal Winter Carnival
-				</h1>
-				<hr>
-				<p class="textp">
-					To promote the culture of Himachal Pradesh, a winter carnival is organized every year in Manali.
-					Himachal
-					Pradesh started the trend of Winter Carnival back in 1977 and now after almost three decades the
-					festival
-					has become bigger and better! During this festival, the ski slopes of Manali are invaded by
-					adventure
-					enthusiasts. Another major highlight of the festival is the beauty contest known as the "Winter
-					Queen" and
-					"Mr. Manali"
-					A procession is also organized from the Hadimba Devi temple. The complete stretch of Manali mall
-					road looks
-					like a carnival. Right from folk dance to entertaining skits, a lot of things can be explored in
-					this
-					festival. People on a tour to Himachal Pradesh can't afford to miss the Himachal Winter Carnival.
-					Other than
-					enjoying the Himachal Winter Carnival in Manali, tourists have an opportunity to visit The Manacle
-					Gompa,
-					Vashisht Springs, Jagatsukh, Manu Temple and Hadimba Temple.
-				</p>
+                    <div class="form-group">
+                      <input
+                        style="width: 70%"
+                        type="email"
+                        id="email"
+                        placeholder="Enter email"
+                      />
+                    </div>
 
-			</div>
-			<div class="AboutSlider" id="s5">
-			</div>
-		</div>
-	</section>
+                    <div class="form-group">
+                      <input
+                        style="width: 70%"
+                        type="password"
+                        id="pwd"
+                        placeholder="Enter password"
+                      />
+                    </div>
 
+                    <button
+                      style="width: 70%"
+                      type="submit"
+                      class="btn btn-success"
+                    >
+                      Sign Up
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Modal Footer-->
+          <div class="modal-footer">
+            <button class="close" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-
-	<!-- Modal to be displayed -->
-	<div class="modal fade" id="myModal" role="dialog">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<!--Header of Modal-->
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 style="text-align:center" class="modal-title text-success">Log In for New Updates</h4>
-				</div>
-				<!--Modal Body-->
-				<div class="modal-body">
-
-					<ul class="nav nav-tabs">
-						<li class="active"><a data-toggle="tab" href="#logIn">Log In</a></li>
-						<li><a data-toggle="tab" href="#signUp">Sign Up</a></li>
-					</ul>
-
-					<div class="tab-content">
-						<div id="logIn" class="tab-pane fade in active">
-							<div class="margin">
-								<form>
-									<div class="form-group">
-										<input style="width : 70%" type="email" id="email" placeholder="Enter email">
-									</div>
-
-									<div class="form-group">
-										<input style="width : 70%" type="password" id="pwd"
-											placeholder="Enter password">
-									</div>
-
-									<button style="width : 70%" type="submit" class="btn btn-success">Log In</button>
-								</form>
-							</div>
-							</form>
-
-						</div>
-						<div id="signUp" class="tab-pane fade">
-							<div class="margin">
-								<form>
-									<div class="form-group">
-										<input style="width : 70%" type="text" id="userName"
-											placeholder="Enter your name">
-									</div>
-
-									<div class="form-group">
-										<input style="width : 70%" type="email" id="email" placeholder="Enter email">
-									</div>
-
-									<div class="form-group">
-										<input style="width : 70%" type="password" id="pwd"
-											placeholder="Enter password">
-									</div>
-
-									<button style="width : 70%" type="submit" class="btn btn-success">Sign Up</button>
-								</form>
-							</div>
-						</div>
-					</div>
-
-				</div>
-				<!--Modal Footer-->
-				<div class="modal-footer">
-					<button class="close" data-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<script>
-		const gra = function (min, max) {
-			return Math.random() * (max - min) + min;
-		}
-		const init = function () {
-			let items = document.querySelectorAll('section');
-			for (let i = 0; i < items.length; i++) {
-				items[i].style.background = randomColor({ luminosity: 'light' });
-			}
-			cssScrollSnapPolyfill();
-		}
-		init();
-	</script>
-	<script>
-		AOS.init();
-	</script>
-</body>
-
+    <script>
+      const gra = function (min, max) {
+        return Math.random() * (max - min) + min;
+      };
+      const init = function () {
+        let items = document.querySelectorAll("section");
+        for (let i = 0; i < items.length; i++) {
+          items[i].style.background = randomColor({ luminosity: "light" });
+        }
+        cssScrollSnapPolyfill();
+      };
+      init();
+    </script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>

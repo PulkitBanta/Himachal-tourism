@@ -1,470 +1,554 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="../../bootstrap/bootstrap-3.3.7-dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="../../ToursimWebProject/jquery-3.3.1.min.js"></script>
+    <script src="../../bootstrap/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <!-- cdn for aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- aos ends here ! -->
+    <title>EcoTourism</title>
 
-<head>
-	<link rel="stylesheet" href="../../bootstrap/bootstrap-3.3.7-dist/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script src="../../ToursimWebProject/jquery-3.3.1.min.js"></script>
-	<script src="../../bootstrap/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-	<!-- cdn for aos -->
-	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-	<!-- aos ends here ! -->
-	<title>EcoTourism</title>
-
-	<style>
-		@font-face {
-      font-family: heading;
-      src: url(../../BeyondWonderland/BeyondWonderland.ttf);
-    }
-    @font-face {
+    <style>
+      @font-face {
+        font-family: heading;
+        src: url(../../BeyondWonderland/BeyondWonderland.ttf);
+      }
+      @font-face {
         font-family: para;
         src: url(../../BeyondWonderland/arapey.italic.ttf);
-    }
-    @font-face {
+      }
+      @font-face {
         font-family: nav;
         src: url(../../BeyondWonderland/requiem.regular.ttf);
-    }
-    .texth{
+      }
+      .texth {
         font-family: heading;
-    }
-    .textp{
+      }
+      .textp {
         font-family: para;
-    }
-		/* Navbar Styling */
-		body {
-			margin: 0;
-			font-family: ink free;
-			scroll-snap-type: mandatory;
-			scroll-snap-points-y: repeat(100vh);
-			scroll-snap-type: y mandatory;
-		}
-		section {
-			/* border-bottom: 1px solid white; */
-			/* padding: 1rem; */
-			/* height: 100vh; */
-			scroll-snap-align: start;
-			/* text-align: center; */
-			position: relative;
-		}
-		.navlinks:hover {
-			background-color: transparent !important;
-			text-decoration: none !important;
-			color: rgb(235, 86, 160);
-		}
-		.fb:hover {
-			color: #3b5998;
-		}
-		.gplus:hover {
-			color: #d34836;
-		}
-		.insta:hover {
-			color: #c13584;
-		}
-		.login:hover {
-			color: rgb(35, 145, 235);
-		}
-		.signup:hover {
-			color: rgb(243, 240, 79);
-		}
-		.navlinks {
-			text-decoration: none;
-			color: white;
-			font-family: nav;
-		}
-		nav {
-			margin-bottom: 0;
-			background-color: rgba(20, 93, 95, 0.486);
-			font-family: nav;
-		}
-		#d1 {
-			top: 20vh;
-			/* margin-left:20vw; */
-			/* width: 45vw; */
-			min-height: 55vh;
-			left: 10vw;
-		}
-		#d2 {
-			top: 6vh;
-			/* margin-left:20vw; */
-			width: 45vw;
-			min-height: 75vh;
-			right: 10vw;
-		}
-		#d3 {
-			top: 14vh;
-			/* margin-left:20vw; */
-			width: 45vw;
-			min-height: 60vh;
-			left: 10vw;
-		}
-		#d4 {
-			top: 6.5vh;
-			/* margin-left:20vw; */
-			width: 45vw;
-			min-height: 75vh;
-			right: 10vw;
-		}
-		.Description {
-			z-index: 1;
-			position: absolute;
-			background-color: rgba(5, 0, 0, 0.767);
-			padding: 2%;
-			color: white;
-			font-size: 1.5vw;
-			font-family: Mono;
-		}
-		#s1 {
-			right: 1vw;
-			top: 20vh;
-			background-image: url("Resources/Images/Picture1.png");
-			left: 50vw;
-		}
-		#s2 {
-			left: 1vw;
-			right: 50vw;
-			top: 10vh;
-			border: 15px solid white;
-			border-radius: 3px;
-			height: 80vh;
-			background-image: url("http://greathimalayannationalpark.com/wp-content/uploads/2015/01/Parkachi-Camping-site-3000-m-Sainj-Valley.jpg");
-		}
-		#s3 {
-			right: 1vw;
-			top: 16vh;
-			background-image: url("https://cdn.japantimes.2xx.jp/wp-content/uploads/2017/11/f-yeti-a-20171130-870x600.jpg");
-			left: 50vw;
-			border: 15px solid white;
-			border-radius: 3px;
-		}
-		#s4 {
-			left: 1vw;
-			right: 50vw;
-			top: 10vh;
-			border: 15px solid white;
-			border-radius: 3px;
-			height: 80vh;
-			background-image: url("https://www.thebetterindia.com/wp-content/uploads/2016/09/download-14.jpg");
-		}
-		.AboutSlider {
-			width: auto;
-			height: 70vh;
-			padding: 1vw;
-			position: absolute;
-			background-size: cover;
-			background-position: center;
-			background-origin: center;
-		}
-		#slide5 {
-			background-image: url(https://tritontravels.co.in/wp-content/uploads/2017/12/mountains_of_seraj_himachal_pradesh_india-1920x1080.jpg);
-		}
-		#slide2 {
-			background-image: url(https://tritontravels.co.in/wp-content/uploads/2017/12/mountains_of_seraj_himachal_pradesh_india-1920x1080.jpg);
-		}
-		#slide3 {
-			background-image: url(http://himachal.nic.in/images/photo-of-the-week/2018/mar/kumarsain.jpg);
-		}
-		#slide4 {
-			background-image: url(http://www.hotelapplepie.com/blog/wp-content/uploads/2014/07/himalaya5.jpg);
-		}
-		.slide {
-			background-attachment: fixed;
-			background-position: center;
-			background-size: cover;
-			height: 100vh;
-			overflow: hidden;
-			position: relative;
-		}
-		.aboutUs {
-			top: 50vh;
-			left: -5vw;
-			transform: rotate(-90deg);
-			position: absolute;
-			color: rgb(255, 255, 255);
-			text-shadow: 2px 3px 10px black;
-			/* horizontal position | vertical position | blur radius |color */
-		}
-		.aboutUsl {
-			right: 0vw;
-			top: 50vh;
-			transform: rotate(90deg);
-			position: absolute;
-			color: rgb(255, 255, 255);
-			text-shadow: 2px 3px 10px black;
-			/* horizontal position | vertical position | blur radius |color */
-		}
-		.icon-bar {
-			background-color: rgb(204, 48, 48) !important;
-		}
-		.form-control {
-			width: 60% !important;
-		}
-		.margin {
-			margin: 2vh !important;
-			text-align: center;
-		}
-	</style>
-</head>
+      }
+      /* Navbar Styling */
+      body {
+        margin: 0;
+        font-family: ink free;
+        scroll-snap-type: mandatory;
+        scroll-snap-points-y: repeat(100vh);
+        scroll-snap-type: y mandatory;
+      }
+      section {
+        /* border-bottom: 1px solid white; */
+        /* padding: 1rem; */
+        /* height: 100vh; */
+        scroll-snap-align: start;
+        /* text-align: center; */
+        position: relative;
+      }
+      .navlinks:hover {
+        background-color: transparent !important;
+        text-decoration: none !important;
+        color: rgb(235, 86, 160);
+      }
+      .fb:hover {
+        color: #3b5998;
+      }
+      .gplus:hover {
+        color: #d34836;
+      }
+      .insta:hover {
+        color: #c13584;
+      }
+      .login:hover {
+        color: rgb(35, 145, 235);
+      }
+      .signup:hover {
+        color: rgb(243, 240, 79);
+      }
+      .navlinks {
+        text-decoration: none;
+        color: white;
+        font-family: nav;
+      }
+      nav {
+        margin-bottom: 0;
+        background-color: rgba(20, 93, 95, 0.486);
+        font-family: nav;
+      }
+      #d1 {
+        top: 20vh;
+        /* margin-left:20vw; */
+        /* width: 45vw; */
+        min-height: 55vh;
+        left: 10vw;
+      }
+      #d2 {
+        top: 6vh;
+        /* margin-left:20vw; */
+        width: 45vw;
+        min-height: 75vh;
+        right: 10vw;
+      }
+      #d3 {
+        top: 14vh;
+        /* margin-left:20vw; */
+        width: 45vw;
+        min-height: 60vh;
+        left: 10vw;
+      }
+      #d4 {
+        top: 6.5vh;
+        /* margin-left:20vw; */
+        width: 45vw;
+        min-height: 75vh;
+        right: 10vw;
+      }
+      .Description {
+        z-index: 1;
+        position: absolute;
+        background-color: rgba(5, 0, 0, 0.767);
+        padding: 2%;
+        color: white;
+        font-size: 1.5vw;
+        font-family: Mono;
+      }
+      #s1 {
+        right: 1vw;
+        top: 20vh;
+        background-image: url("Resources/Images/Picture1.png");
+        left: 50vw;
+      }
+      #s2 {
+        left: 1vw;
+        right: 50vw;
+        top: 10vh;
+        border: 15px solid white;
+        border-radius: 3px;
+        height: 80vh;
+        background-image: url("http://greathimalayannationalpark.com/wp-content/uploads/2015/01/Parkachi-Camping-site-3000-m-Sainj-Valley.jpg");
+      }
+      #s3 {
+        right: 1vw;
+        top: 16vh;
+        background-image: url("https://cdn.japantimes.2xx.jp/wp-content/uploads/2017/11/f-yeti-a-20171130-870x600.jpg");
+        left: 50vw;
+        border: 15px solid white;
+        border-radius: 3px;
+      }
+      #s4 {
+        left: 1vw;
+        right: 50vw;
+        top: 10vh;
+        border: 15px solid white;
+        border-radius: 3px;
+        height: 80vh;
+        background-image: url("https://www.thebetterindia.com/wp-content/uploads/2016/09/download-14.jpg");
+      }
+      .AboutSlider {
+        width: auto;
+        height: 70vh;
+        padding: 1vw;
+        position: absolute;
+        background-size: cover;
+        background-position: center;
+        background-origin: center;
+      }
+      #slide5 {
+        background-image: url(https://tritontravels.co.in/wp-content/uploads/2017/12/mountains_of_seraj_himachal_pradesh_india-1920x1080.jpg);
+      }
+      #slide2 {
+        background-image: url(https://tritontravels.co.in/wp-content/uploads/2017/12/mountains_of_seraj_himachal_pradesh_india-1920x1080.jpg);
+      }
+      #slide3 {
+        background-image: url(http://himachal.nic.in/images/photo-of-the-week/2018/mar/kumarsain.jpg);
+      }
+      #slide4 {
+        background-image: url(http://www.hotelapplepie.com/blog/wp-content/uploads/2014/07/himalaya5.jpg);
+      }
+      .slide {
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+      }
+      .aboutUs {
+        top: 50vh;
+        left: -5vw;
+        transform: rotate(-90deg);
+        position: absolute;
+        color: rgb(255, 255, 255);
+        text-shadow: 2px 3px 10px black;
+        /* horizontal position | vertical position | blur radius |color */
+      }
+      .aboutUsl {
+        right: 0vw;
+        top: 50vh;
+        transform: rotate(90deg);
+        position: absolute;
+        color: rgb(255, 255, 255);
+        text-shadow: 2px 3px 10px black;
+        /* horizontal position | vertical position | blur radius |color */
+      }
+      .icon-bar {
+        background-color: rgb(204, 48, 48) !important;
+      }
+      .form-control {
+        width: 60% !important;
+      }
+      .margin {
+        margin: 2vh !important;
+        text-align: center;
+      }
+    </style>
+  </head>
 
-<body>
-		<nav class="navbar navbar-fixed-top">
-				<div class="container-fluid">
-					<div class="navbar-header" style="padding-left:1vw;">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<a class="navbar-brand" href="../../ToursimWebProject/Index.html"><img style="width:25vw;"
-								src="../res/logo.png"></a>
-					</div>
-					<div class="collapse navbar-collapse" id="myNavbar">
-						<ul class="nav navbar-nav" style="padding: 3vh 0 2vh 2vw; font-size:2rem;">
-							<li><a class="navlinks" href="fair and festivals.html">Festivals</a></li>
-							<li><a class="navlinks" href="eco tourism.html">EcoTourism</a></li>
-							<li><a class="navlinks" href="fortsandmemorials.html">Forts</a></li>
-						</ul>
-						<ul class="nav navbar-nav navbar-right" style="padding: 3vh 0 3vh 6vw; font-size:2rem;">
-								<li><a class="navlinks fb" href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-								<li><a class="navlinks insta" href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-								<li><a class="navlinks gplus" href="https://www.google.com/" target="_blank"><i class="fa fa-google-plus social"></i></a></li>
-							<li><a data-target="#myModal" data-toggle="modal" class="navlinks signup" href="#"><i class="fa fa-user"></i> Sign Up</a></li>
-										<li><a data-target="#myModal" data-toggle="modal" class="navlinks login" href="#"><i class="fa fa-lock"></i> Login</a></li>
-						</ul>
-					</div>
-				</div>
-			</nav>
+  <body>
+    <nav class="navbar navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header" style="padding-left: 1vw">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#myNavbar"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../index.html"
+            ><img style="width: 20vw" src="../res/logo.png"
+          /></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul
+            class="nav navbar-nav"
+            style="padding: 3vh 0 2vh 2vw; font-size: 2rem"
+          >
+            <li>
+              <a class="navlinks" href="fair and festivals.html">Festivals</a>
+            </li>
+            <li><a class="navlinks" href="eco tourism.html">EcoTourism</a></li>
+            <li><a class="navlinks" href="fortsandmemorials.html">Forts</a></li>
+          </ul>
+          <ul
+            class="nav navbar-nav navbar-right"
+            style="padding: 3vh 0 3vh 6vw; font-size: 2rem"
+          >
+            <li>
+              <a
+                class="navlinks fb"
+                href="https://www.facebook.com/"
+                target="_blank"
+                ><i class="fa fa-facebook"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                class="navlinks insta"
+                href="https://www.instagram.com/"
+                target="_blank"
+                ><i class="fa fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                class="navlinks gplus"
+                href="https://www.google.com/"
+                target="_blank"
+                ><i class="fa fa-google-plus social"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                data-target="#myModal"
+                data-toggle="modal"
+                class="navlinks signup"
+                href="#"
+                ><i class="fa fa-user"></i> Sign Up</a
+              >
+            </li>
+            <li>
+              <a
+                data-target="#myModal"
+                data-toggle="modal"
+                class="navlinks login"
+                href="#"
+                ><i class="fa fa-lock"></i> Login</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-	<section>
-		<div id="slide2" class="slide">
-			<span class="aboutUs">
-				<h1 style="font-size:3vw;font-family:Lumos;">ECO TOURISM</h1>
-			</span>
+    <section>
+      <div id="slide2" class="slide">
+        <span class="aboutUs">
+          <h1 style="font-size: 3vw; font-family: Lumos">ECO TOURISM</h1>
+        </span>
 
-			<div class="Description container" id="d1">
+        <div class="Description container" id="d1">
+          <h1 class="texth">INTRODUCTION</h1>
+          <hr />
+          <p class="textp">
+            Eco Tourism first came into existence in the early 1980s and since
+            then it has started to develop pretty well around the world. Eco
+            tourism or ecological tourism is a multi faceted term. Ecology here
+            refers not only to the environment, or the wildlife and forest
+            reserves, but it also has social connotations to it. Ecological
+            tourism is "responsible travel to natural areas that conserves the
+            environment and improves the well-being of local people" (by
+            international eco tourism society). Accordingly, an important aspect
+            of eco tourism is also safeguarding nature, which locals and
+            tourists both have to ensure. Eco tourism is a relatively new term
+            and concept and has been acknowledged in India off late only.
+            Himachal Pradesh is one such beautiful state in India where eco
+            tourism is developing in its pure form. Himachal Pradesh is
+            undoubtedly blessed with everything that makes it a first choice of
+            eco tourists. Moreover, the state has also developed many facilities
+            for eco tourist. There are 400 forest bungalows at vantage points,
+            dedicated nature trails have been framed and trained guides and
+            porters are available too.
+          </p>
+        </div>
+      </div>
+    </section>
 
-				<h1 class="texth">
-					INTRODUCTION
-				</h1>
-				<hr>
-				<p class="textp">
-					Eco Tourism first came into existence in the early 1980s and since then it has started to develop
-					pretty
-					well around the world. Eco tourism or ecological tourism is a multi faceted term. Ecology here
-					refers not
-					only to the environment, or the wildlife and forest reserves, but it also has social connotations to
-					it.
-					Ecological tourism is "responsible travel to natural areas that conserves the environment and
-					improves the
-					well-being of local people" (by international eco tourism society). Accordingly, an important aspect
-					of eco
-					tourism is also safeguarding nature, which locals and tourists both have to ensure.
-					Eco tourism is a relatively new term and concept and has been acknowledged in India off late only.
-					Himachal
-					Pradesh is one such beautiful state in India where eco tourism is developing in its pure form.
-					Himachal
-					Pradesh is undoubtedly blessed with everything that makes it a first choice of eco tourists.
-					Moreover, the state has also developed many facilities for eco tourist. There are 400 forest
-					bungalows at
-					vantage points, dedicated nature trails have been framed and trained guides and porters are
-					available too.
-				</p>
-
-			</div>
-
-
-
-		</div>
-	</section>
-
-
-	<section>
-		<div id="slide3" class="slide">
-			<!-- <span class="aboutUsl">
+    <section>
+      <div id="slide3" class="slide">
+        <!-- <span class="aboutUsl">
         <h1 style="font-size:3vw;font-family:Lumos;">The Greens</h1>
       </span> -->
 
-			<div  data-aos="fade-left" data-aos-duration="3000" class="Description" id="d2">
+        <div
+          data-aos="fade-left"
+          data-aos-duration="3000"
+          class="Description"
+          id="d2"
+        >
+          <h1 class="texth">The Greens</h1>
+          <hr />
+          <p class="textp">
+            Nature comes alive in its every possible form here. Green forests
+            spreading over miles of hilly terrains. Oaks, maples, birdcherry,
+            hazelnut, walnuts and many other beautiful trees lend Himachal a
+            beauty that is beyond words. There are 3240 species of plants in the
+            state. National Parks in Himachal Pradesh are a perfect place for
+            eco tourists. Great Himalayan National Park in Kullu is one of the
+            prime protected lands and is a perfect place to enjoy nature at its
+            best. Himalayan Nature Park near Shimla has over 100 hectares of
+            Western Himalayan temperate forests that are rich with floral
+            varieties. Another famous spot in Himachal is Potter's Hill Van
+            Vihar. It covers around 100 hectares of Western Himalayan
+            temperature forest that are rich with floral diversity. These are
+            just few of the many places in Himachal Pradesh where one can enjoy
+            the oneness with nature. Sangla valley and Chamba valley are such
+            other places.
+          </p>
+        </div>
+        <div class="AboutSlider" id="s2"></div>
+      </div>
+    </section>
 
-				<h1 class="texth">
-					The Greens
-				</h1>
-				<hr>
-				<p class="textp">
-					Nature comes alive in its every possible form here. Green forests spreading over miles of hilly
-					terrains.
-					Oaks, maples, birdcherry, hazelnut, walnuts and many other beautiful trees lend Himachal a beauty
-					that
-					is beyond words. There are 3240 species of plants in the state. National Parks in Himachal Pradesh
-					are a
-					perfect place for eco tourists. Great Himalayan National Park in Kullu is one of the prime protected
-					lands and is a perfect place to enjoy nature at its best. Himalayan Nature Park near Shimla has over
-					100
-					hectares of Western Himalayan temperate forests that are rich with floral varieties. Another famous
-					spot
-					in Himachal is Potter's Hill Van Vihar. It covers around 100 hectares of Western Himalayan
-					temperature
-					forest that are rich with floral diversity. These are just few of the many places in Himachal
-					Pradesh
-					where one can enjoy the oneness with nature. Sangla valley and Chamba valley are such other places.
-				</p>
-
-			</div>
-			<div class="AboutSlider" id="s2">
-			</div>
-		</div>
-	</section>
-
-
-	<section>
-		<div id="slide4" class="slide">
-			<!-- <span class="aboutUs">
+    <section>
+      <div id="slide4" class="slide">
+        <!-- <span class="aboutUs">
         <h1 style="font-size:3vw;font-family:Lumos;">About Himachal Pradesh</h1>
       </span> -->
 
-			<div  data-aos="fade-right" data-aos-duration="3000" class="Description" id="d3">
+        <div
+          data-aos="fade-right"
+          data-aos-duration="3000"
+          class="Description"
+          id="d3"
+        >
+          <h1 class="texth">The Wild life</h1>
+          <hr />
+          <p class="textp">
+            Wildlife in Himachal Pradesh is another big draw in its ecotourism
+            chart. Its different types of terrain, pleasant climate and
+            vegetation are very suitable for wildlife to sustain, survive and
+            flourish. Snow leopards, Himalayan brown beer, Ibex, Yak, the
+            beautiful manal bird and Western tragopan, Musk Deer and many more.
+            Himachal Pradesh has 32 wildlife sanctuaries with 64 species of
+            mammals, 43 reptiles and 516 varieties of aquatic fauna. The facts
+            speak volumes about the richness of state in terms of its wildlife
+            reserves. Renuka wildlife sanctuary, Churdhar sanctuary, both in
+            Sirmour, Chail Sanctuary in Solan are some of the more popular names
+            with tourists. Maharana Pratap Sagar is the state's famous wetland
+            and is angler's delight.
+          </p>
+        </div>
 
-				<h1 class="texth">
-					The Wild life
-				</h1>
-				<hr>
-				<p class="textp">
-					Wildlife in Himachal Pradesh is another big draw in its ecotourism chart. Its different types of
-					terrain, pleasant climate and vegetation are very suitable for wildlife to sustain, survive and
-					flourish. Snow leopards, Himalayan brown beer, Ibex, Yak, the beautiful manal bird and Western
-					tragopan,
-					Musk Deer and many more. Himachal Pradesh has 32 wildlife sanctuaries with 64 species of mammals, 43
-					reptiles and 516 varieties of aquatic fauna. The facts speak volumes about the richness of state in
-					terms of its wildlife reserves. Renuka wildlife sanctuary, Churdhar sanctuary, both in Sirmour,
-					Chail
-					Sanctuary in Solan are some of the more popular names with tourists. Maharana Pratap Sagar is the
-					state's famous wetland and is angler's delight.
-				</p>
-			</div>
+        <div class="AboutSlider" id="s3"></div>
+      </div>
+    </section>
 
-			<div class="AboutSlider" id="s3">
-			</div>
-
-		</div>
-	</section>
-
-	<section>
-		<div id="slide5" class="slide">
-			<!-- <span class="aboutUsl">
+    <section>
+      <div id="slide5" class="slide">
+        <!-- <span class="aboutUsl">
             <h1 style="font-size:3vw;font-family:Lumos;">The Greens</h1>
           </span> -->
 
-			<div  data-aos="fade-left" data-aos-duration="3000" class="Description" id="d4">
+        <div
+          data-aos="fade-left"
+          data-aos-duration="3000"
+          class="Description"
+          id="d4"
+        >
+          <h1 class="texth">The Tribes</h1>
+          <hr />
 
-				<h1 class="texth">
-					The Tribes
-				</h1>
-				<hr>
+          <p class="textp">
+            Another crucial link in eco tourism are the local people who help
+            preserve the nature trails. The tribals in Himachal Pradesh are a
+            major component of eco-tourism. The entire areas of Lahaul, Spiti
+            and Kinnaur near Ladakh and Tibet were once full of different tribal
+            groups. However, over a period of time, the tribal population of the
+            state has decreased since more and more tribals have migrated to
+            other places and have risen enough to support separate families. A
+            prominent tribe of Himachal are the Shephards (known as Gaddis here)
+            who rear goats and sheep and keep moving with them to higher
+            pastures in summers and lower, more warmer regions in winters.
+            Another prominent tribal group is that of Kinnars inhabiting the
+            district of Kinnaur. Some of them are engaged in horticulture and
+            agriculture. They also rear goat and sheep for wool. Their marriage
+            customs are very interesting.
+          </p>
+        </div>
+        <div class="AboutSlider" id="s4"></div>
+      </div>
+    </section>
 
-				<p class="textp">
-					Another crucial link in eco tourism are the local people who help preserve the nature trails. The
-					tribals in Himachal Pradesh are a major component of eco-tourism. The entire areas of Lahaul, Spiti
-					and Kinnaur near Ladakh and Tibet were once full of different tribal groups. However, over a period
-					of time, the tribal population of the state has decreased since more and more tribals have migrated
-					to other places and have risen enough to support separate families. A prominent tribe of Himachal
-					are the Shephards (known as Gaddis here) who rear goats and sheep and keep moving with them to
-					higher pastures in summers and lower, more warmer regions in winters. Another prominent tribal group
-					is that of Kinnars inhabiting the district of Kinnaur. Some of them are engaged in horticulture and
-					agriculture. They also rear goat and sheep for wool. Their marriage customs are very interesting.
-				</p>
+    <!-- Modal to be displayed -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!--Header of Modal-->
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+            <h4 style="text-align: center" class="modal-title text-success">
+              Log In for New Updates
+            </h4>
+          </div>
+          <!--Modal Body-->
+          <div class="modal-body">
+            <ul class="nav nav-tabs">
+              <li class="active">
+                <a data-toggle="tab" href="#logIn">Log In</a>
+              </li>
+              <li><a data-toggle="tab" href="#signUp">Sign Up</a></li>
+            </ul>
 
-			</div>
-			<div class="AboutSlider" id="s4">
-			</div>
-		</div>
-	</section>
+            <div class="tab-content">
+              <div id="logIn" class="tab-pane fade in active">
+                <div class="margin">
+                  <form>
+                    <div class="form-group">
+                      <input
+                        style="width: 70%"
+                        type="email"
+                        id="email"
+                        placeholder="Enter email"
+                      />
+                    </div>
 
+                    <div class="form-group">
+                      <input
+                        style="width: 70%"
+                        type="password"
+                        id="pwd"
+                        placeholder="Enter password"
+                      />
+                    </div>
 
+                    <button
+                      style="width: 70%"
+                      type="submit"
+                      class="btn btn-success"
+                    >
+                      Log In
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div id="signUp" class="tab-pane fade">
+                <div class="margin">
+                  <form>
+                    <div class="form-group">
+                      <input
+                        style="width: 70%"
+                        type="text"
+                        id="userName"
+                        placeholder="Enter your name"
+                      />
+                    </div>
 
-	<!-- Modal to be displayed -->
-	<div class="modal fade" id="myModal" role="dialog">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<!--Header of Modal-->
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 style="text-align:center" class="modal-title text-success">Log In for New Updates</h4>
-				</div>
-				<!--Modal Body-->
-				<div class="modal-body">
+                    <div class="form-group">
+                      <input
+                        style="width: 70%"
+                        type="email"
+                        id="email"
+                        placeholder="Enter email"
+                      />
+                    </div>
 
-					<ul class="nav nav-tabs">
-						<li class="active"><a data-toggle="tab" href="#logIn">Log In</a></li>
-						<li><a data-toggle="tab" href="#signUp">Sign Up</a></li>
-					</ul>
+                    <div class="form-group">
+                      <input
+                        style="width: 70%"
+                        type="password"
+                        id="pwd"
+                        placeholder="Enter password"
+                      />
+                    </div>
 
-					<div class="tab-content">
-						<div id="logIn" class="tab-pane fade in active">
-							<div class="margin">
-								<form>
-									<div class="form-group">
-										<input style="width : 70%" type="email" id="email" placeholder="Enter email">
-									</div>
+                    <button
+                      style="width: 70%"
+                      type="submit"
+                      class="btn btn-success"
+                    >
+                      Sign Up
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Modal Footer-->
+          <div class="modal-footer">
+            <button class="close" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-									<div class="form-group">
-										<input style="width : 70%" type="password" id="pwd"
-											placeholder="Enter password">
-									</div>
-
-									<button style="width : 70%" type="submit" class="btn btn-success">Log In</button>
-								</form>
-							</div>
-							</form>
-
-						</div>
-						<div id="signUp" class="tab-pane fade">
-							<div class="margin">
-								<form>
-									<div class="form-group">
-										<input style="width : 70%" type="text" id="userName"
-											placeholder="Enter your name">
-									</div>
-
-									<div class="form-group">
-										<input style="width : 70%" type="email" id="email" placeholder="Enter email">
-									</div>
-
-									<div class="form-group">
-										<input style="width : 70%" type="password" id="pwd"
-											placeholder="Enter password">
-									</div>
-
-									<button style="width : 70%" type="submit" class="btn btn-success">Sign Up</button>
-								</form>
-							</div>
-						</div>
-					</div>
-
-				</div>
-				<!--Modal Footer-->
-				<div class="modal-footer">
-					<button class="close" data-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<script>
-		const gra = function (min, max) {
-			return Math.random() * (max - min) + min;
-		}
-		const init = function () {
-			let items = document.querySelectorAll('section');
-			for (let i = 0; i < items.length; i++) {
-				items[i].style.background = randomColor({ luminosity: 'light' });
-			}
-			cssScrollSnapPolyfill();
-		}
-		init();
-	</script>
-	<script>
-		AOS.init();
-	</script>
-</body>
-
+    <script>
+      const gra = function (min, max) {
+        return Math.random() * (max - min) + min;
+      };
+      const init = function () {
+        let items = document.querySelectorAll("section");
+        for (let i = 0; i < items.length; i++) {
+          items[i].style.background = randomColor({ luminosity: "light" });
+        }
+        cssScrollSnapPolyfill();
+      };
+      init();
+    </script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>

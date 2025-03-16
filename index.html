@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="./ToursimWebProject/Bootstrap/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="./ToursimWebProject/jquery-3.3.1.min.js"></script>
+    <script src="./ToursimWebProject/Bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- cdn for aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- aos ends here ! -->
+    <title>Unforgettable Himachal</title>
+
+    <script>
+      //  This is the background-corousel
+      var bgArr = [
+        "./ToursimWebProject/Resources/Images/slideb.jpg",
+        "./ToursimWebProject/Resources/Images/slide2.jpg",
+        "./ToursimWebProject/Resources/Images/slide4.jpg",
+        "./ToursimWebProject/Resources/Images/prasharLake.jpg",
+        "./ToursimWebProject/Resources/Images/kangraValley.jpg",
+      ]; //and so on...
+
+      var i = 1;
+      // Start the slide show
+      var interval = self.setInterval(swapBkgnd, 2500);
+
+      function swapBkgnd() {
+        if (i > bgArr.length - 1) {
+          i = 0;
+          $(".background-img").css("background-image", "url(" + bgArr[i] + ")");
+        } else {
+          $(".background-img").css("background-image", "url(" + bgArr[i] + ")");
+        }
+        i++;
+      }
+
+      // Modal Script
+      $(window).on("load", function () {
+        setTimeout(function () {
+          // USED TO SET DELAY TIME FOR THE FUNCTION
+          $("#myModal").modal("show");
+        }, 15000); // THE TIME IS USED IN ms
+      });
+      $(document).ready(function () {
+        $("log-in").click(function () {});
+      });
+    </script>
+
+    <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||__STYLING STARTS HERE__||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+
+    <style>
+      body {
+        font-family: ink free;
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+      }
+
+      @font-face {
+        font-family: heading;
+        src: url(./BeyondWonderland/BeyondWonderland.ttf);
+      }
+      @font-face {
+        font-family: para;
+        src: url(./BeyondWonderland/arapey.italic.ttf);
+      }
+      @font-face {
+        font-family: nav;
+        src: url(./BeyondWonderland/requiem.regular.ttf);
+      }
+      .texth {
+        font-family: heading;
+      }
+      .textp {
+        font-family: para;
+      }
+      /* Navbar Styling */
+      .navlinks {
+        text-decoration: none;
+        color: white;
+        font-family: nav;
+      }
+
+      .icon-bar {
+        background-color: rgb(204, 48, 48) !important;
+      }
+
+      .navlinks:hover {
+        background-color: transparent !important;
+        text-decoration: none !important;
+        color: rgb(235, 86, 160);
+      }
+
+      .fb:hover {
+        color: #3b5998;
+      }
+
+      .gplus:hover {
+        color: #d34836;
+      }
+
+      .insta:hover {
+        color: #c13584;
+      }
+
+      .login:hover {
+        color: rgb(35, 145, 235);
+      }
+
+      .signup:hover {
+        color: rgb(243, 240, 79);
+      }
+
+      .background-img {
+        background-image: url("./ToursimWebProject/Resources/Images/kangramain.jpg");
+      }
+
+      nav {
+        background-color: rgba(20, 93, 95, 0.486);
+      }
+
+      h2 {
+        font-family: mistral;
+      }
+
+      .slide1 {
+        height: 100vh;
+        background-size: cover;
+        position: relative;
+        background-attachment: fixed;
+        overflow: hidden;
+        /* scroll-snap-align: start; */
+      }
+
+      .slide2 {
+        height: 100vh;
+        background-image: linear-gradient("white");
+        position: relative;
+        scroll-snap-align: start;
+        overflow: hidden;
+      }
+
+      .DescriptionImage {
+        background-image: url("./ToursimWebProject/Resources/Images/kangramain.jpg");
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        top: 10vh;
+        left: 5vw;
+        width: 70vw;
+        height: 80vh;
+      }
+
+      .Description {
+        position: relative;
+        padding: 2rem;
+        background-image: linear-gradient(#ff9933, green);
+        left: 65vw;
+        width: 25vw;
+        color: white;
+        top: 20vh;
+        font-size: 130%;
+        transition: ease-in-out 0.3s;
+        /* This will add transition to the hover effect*/
+      }
+
+      .slide3 {
+        height: 100vh;
+        position: relative;
+        background-image: url("./ToursimWebProject/Resources/Images/hd1.jpg");
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        scroll-snap-align: start;
+        overflow: hidden;
+      }
+
+      #content {
+        position: relative;
+        top: 15vh;
+        margin: 0 5vw 0 6vw;
+        /* overflow: hidden; */
+      }
+
+      .listcontent {
+        color: white;
+        background-image: linear-gradient(
+          rgba(116, 39, 240, 0.486),
+          rgb(136, 209, 238)
+        );
+        margin: 1.5rem;
+        padding: 3rem;
+        font-size: 120%;
+        transition: ease-in-out 0.3s;
+        /* This will add transition to the hover effect*/
+      }
+
+      .listbody {
+        padding-top: 2rem;
+      }
+
+      .btn-link {
+        margin-left: 30%;
+        font-size: 120%;
+      }
+
+      .btn-link a:hover {
+        text-decoration: none !important;
+      }
+
+      .btn-link a {
+        text-decoration: none;
+        color: rgb(0, 238, 255) !important;
+      }
+
+      .col-xs-3 .btn-link a {
+        color: rgb(255, 81, 0) !important;
+      }
+
+      .nav-tabs li {
+        width: 50%;
+        text-align: center;
+      }
+
+      .margin {
+        margin: 2vh !important;
+        text-align: center;
+      }
+
+      .listcontent:hover,
+      .Description:hover {
+        transform: scale(1.13, 1.13);
+        box-shadow: 10px 10px 5px grey;
+        /*horizontal shadow / vertical shadow / blur radius*/
+      }
+
+      .form-control {
+        width: 60% !important;
+      }
+
+      .justify {
+        text-align: justify;
+      }
+
+      @media only screen and (max-width: 600px) {
+        body {
+          background-color: lightblue;
+        }
+      }
+    </style>
+
+    <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||__STYLING ENDS HERE__||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+  </head>
+
+  <body>
+    <!--Navbar at the top-->
+    <nav class="navbar navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header" style="padding-left: 1vw">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#myNavbar"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"
+            ><img
+              style="width: 20vw"
+              src="./ToursimWebProject/Resources/Images/logo.png"
+          /></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul
+            class="nav navbar-nav"
+            style="padding: 3vh 0 2vh 2vw; font-size: 2rem"
+          >
+            <li>
+              <a class="navlinks" href="./Project/HTML/fair and festivals.html"
+                >Festivals</a
+              >
+            </li>
+            <li>
+              <a class="navlinks" href="./Project/HTML/eco tourism.html"
+                >EcoTourism</a
+              >
+            </li>
+            <li>
+              <a class="navlinks" href="./Project/HTML/fortsandmemorials.html"
+                >Forts</a
+              >
+            </li>
+          </ul>
+          <ul
+            class="nav navbar-nav navbar-right"
+            style="padding: 3vh 0 3vh 6vw; font-size: 2rem"
+          >
+            <li>
+              <a
+                class="navlinks fb"
+                href="https://www.facebook.com/"
+                target="_blank"
+                ><i class="fa fa-facebook"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                class="navlinks insta"
+                href="https://www.instagram.com/"
+                target="_blank"
+                ><i class="fa fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                class="navlinks gplus"
+                href="https://www.google.com/"
+                target="_blank"
+                ><i class="fa fa-google-plus social"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                data-target="#myModal"
+                data-toggle="modal"
+                class="navlinks signup"
+                href="#"
+                ><i class="fa fa-user"></i> Sign Up</a
+              >
+            </li>
+            <li>
+              <a
+                data-target="#myModal"
+                data-toggle="modal"
+                class="navlinks login"
+                href="#"
+                ><i class="fa fa-lock"></i> Login</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="slide1 background-img"></div>
+
+    <div class="slide2">
+      <div class="DescriptionImage"></div>
+      <div data-aos="fade-up-left" data-aos-duration="500" class="Description">
+        <h2 class="texth">About Tourism in Himachal Pradesh</h2>
+        <p class="justify textp">
+          Himachal Pradesh is a northern Indian state in the Himalayas. It's
+          home to scenic mountain towns and resorts such as Dalhousie. Host to
+          the Dalai Lama, Himachal Pradesh has a strong Tibetan presence. This
+          is reflected in its Buddhist temples and monasteries, as well as its
+          vibrant Tibetan New Year celebrations. The region is also well known
+          for its trekking, climbing and skiing areas.
+        </p>
+        <button class="btn btn-link">
+          <a href="./ToursimWebProject/About.html">See more</a>
+        </button>
+      </div>
+    </div>
+
+    <div class="slide3">
+      <div class="row" id="content">
+        <div class="col-xs-1"></div>
+
+        <div
+          data-aos="flip-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="500"
+          class="col-xs-3 listcontent"
+        >
+          <h2 class="texth" style="text-align: center">Treks or Camping</h2>
+          <p class="listbody justify textp">
+            Camping is an outdoor activity involving overnight stays away from
+            home in a shelter, such as a tent. Typically participants leave
+            developed areas to spend time outdoors in more natural ones in
+            pursuit of activities providing them enjoyment. To be regarded as
+            "camping" a minimum of one night is spent outdoors, distinguishing
+            it from day-tripping, picnicking, and other similarly short-term
+            recreational activities.
+          </p>
+          <br />
+          <!-- <button class="btn btn-link"><a href="About.html">See more</a></button> -->
+        </div>
+
+        <div
+          data-aos="flip-down"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="500"
+          class="col-xs-3 listcontent"
+        >
+          <h2 class="texth" style="text-align: center">Sight Seeing</h2>
+          <p class="listbody textp justify">
+            Tourism is travel for pleasure or business; Tourism is cool also the
+            theory and practice of touring, the business of attracting,
+            accommodating, and entertaining tourists, and the business of
+            operating tours. Tourism may be international, or within the
+            traveller's country. The World Tourism Organization defines tourism
+            more generally, in terms which go "beyond the common perception of
+            tourism as being limited to holiday activity only".
+          </p>
+
+          <!-- <button class="btn btn-link"><a href="About.html">See more</a></button> -->
+        </div>
+
+        <div
+          data-aos="flip-right"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="500"
+          class="col-xs-3 listcontent"
+        >
+          <h2 class="texth" style="text-align: center">Holy Places</h2>
+          <p class="listbody textp">
+            Many shrines are located within buildings and in the temples
+            designed specifically for worship, such as a church in Christianity,
+            or a mandir in Hinduism. A shrine here is usually the centre of
+            attention in the building, and is given a place of prominence. In
+            such cases, adherents of the faith assemble within the building in
+            order to venerate the deity at the shrine. In classical temple
+            architecture, the shrine may be synonymous with the cella.
+          </p>
+          <!-- <button class="btn btn-link"><a href="About.html">See more</a></button> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal to be displayed -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!--Header of Modal-->
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+            <h4 style="text-align: center" class="modal-title text-success">
+              Log In for New Updates
+            </h4>
+          </div>
+          <!--Modal Body-->
+          <div class="modal-body">
+            <ul class="nav nav-tabs">
+              <li class="active">
+                <a data-toggle="tab" href="#logIn">Log In</a>
+              </li>
+              <li><a data-toggle="tab" href="#signUp">Sign Up</a></li>
+            </ul>
+
+            <div class="tab-content">
+              <div id="logIn" class="tab-pane fade in active">
+                <div class="margin">
+                  <form>
+                    <div class="form-group">
+                      <input
+                        style="width: 70%"
+                        type="email"
+                        id="email"
+                        placeholder="Enter email"
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <input
+                        style="width: 70%"
+                        type="password"
+                        id="pwd"
+                        placeholder="Enter password"
+                      />
+                    </div>
+
+                    <button
+                      style="width: 70%"
+                      type="submit"
+                      class="btn btn-success"
+                    >
+                      Log In
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div id="signUp" class="tab-pane fade">
+                <div class="margin">
+                  <form>
+                    <div class="form-group">
+                      <input
+                        style="width: 70%"
+                        type="text"
+                        id="userName"
+                        placeholder="Enter your name"
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <input
+                        style="width: 70%"
+                        type="email"
+                        id="email"
+                        placeholder="Enter email"
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <input
+                        style="width: 70%"
+                        type="password"
+                        id="pwd"
+                        placeholder="Enter password"
+                      />
+                    </div>
+
+                    <button
+                      style="width: 70%"
+                      type="submit"
+                      class="btn btn-success"
+                    >
+                      Sign Up
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Modal Footer-->
+          <div class="modal-footer">
+            <button class="close" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
